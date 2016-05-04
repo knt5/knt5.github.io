@@ -17,3 +17,6 @@ node_modules
 
 # Hidden meta data file of Mac OS X
 .DS_Store
+
+# Sass cache directory
+.sass-cache
