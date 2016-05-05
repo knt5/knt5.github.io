@@ -20,3 +20,6 @@ node_modules
 
 # Sass cache directory
 .sass-cache
+
+# Gulp working directory
+gulp/work/
