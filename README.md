@@ -2,7 +2,7 @@
 
 https://knt5.github.io/
 
-## Development installation
+## Build development enviroment
 
 Install gems for gulp tasks.
 
