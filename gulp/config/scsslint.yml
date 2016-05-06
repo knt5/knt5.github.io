@@ -4,3 +4,12 @@ linters:
     allow_non_nested_indentation: false
     character: tab
     width: 1
+
+  ColorVariable:
+    enabled: false
+
+  SingleLinePerSelector:
+    enabled: false
+
+  PropertySortOrder:
+    enabled: false
