@@ -1,2 +1,32 @@
 @import '../common/base/base';
 @import '../common/parts/footer';
+
+.main {
+	margin: 20px auto 0;
+	padding: 0 20px;
+	width: $width;
+}
+
+.profile {
+	h2 {
+		text-align: center;
+		font-size: 55px;
+		font-weight: normal;
+		letter-spacing: 2px;
+	}
+	ul {
+		margin-top: 10px;
+	}
+	span {
+		font-weight: bold;
+	}
+	strong {
+		color: #f73;
+	}
+}
+
+@media (max-width: $width) {
+	.main {
+		width: auto;
+	}
+}

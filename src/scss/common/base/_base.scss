@@ -1,4 +1,5 @@
 @import './reset';
+@import './variables';
 
 *, *::before, *::after {
 	box-sizing: border-box;
@@ -6,12 +7,12 @@
 
 body {
 	color: #333;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.4;
 }
 
 body, input, select, textarea, th, td {
-	font-family: "Apple TP", "Helvetica Neue", "Helvetica",
+	font-family: "Myriad Pro", "Lucida Grande",
 		"Hiragino Kaku Gothic Pro", "Meiryo", "sans-serif";
 }
 
