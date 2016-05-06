@@ -52,9 +52,10 @@ gulp.task('build:js', ['merge:js'], function() {
 });
 
 gulp.task('build:css', function() {
-	return sass('src/scss/**/*.scss', {style: 'compressed'})
+	return sass('src/scss/**/*.scss', { style: 'compressed' })
 		.on('error', sass.logError)
-		.pipe(gulp.dest('gulp/work/css/compiled/'));
+		.pipe(rename({ dirname: '' }))
+		.pipe(gulp.dest('gulp/work/css/built/'));
 });
 
 gulp.task('build', ['build:js', 'build:css'], function() {
