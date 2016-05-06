@@ -36,7 +36,7 @@ gulp.task('merge:js', function(callback) {
 			.pipe(gulp.dest('gulp/work/js/merged/'))
 			.on('end', function() {
 				doneCount ++;
-				if(doneCount >= baseNames.length) {
+				if (doneCount >= baseNames.length) {
 					callback();
 				}
 			});
@@ -47,5 +47,8 @@ gulp.task('build:js', ['merge:js'], function(callback) {
 	gulp.src('gulp/work/js/merged/*.js')
 		.pipe(plumber())
 		.pipe(uglify())
-		.pipe(gulp.dest('gulp/work/js/minified/'));
+		.pipe(gulp.dest('gulp/work/js/minified/'))
+		.on('end', function() {
+			callback();
+		});
 });
