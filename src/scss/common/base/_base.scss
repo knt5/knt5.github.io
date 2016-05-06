@@ -1,0 +1,30 @@
+@import './reset';
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	color: #333;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+body, input, select, textarea, th, td {
+	font-family: "Apple TP", "Helvetica Neue", "Helvetica",
+		"Hiragino Kaku Gothic Pro", "Meiryo", "sans-serif";
+}
+
+a {
+	color: #07d;
+}
+
+a:link, a:visited, a:active {
+	text-decoration: none;
+}
+
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
