@@ -3,9 +3,11 @@ var scsslint = require('gulp-scss-lint');
 var eslint = require('gulp-eslint');
 var config = require('../config/config');
 
-gulp.task('scss-lint', function() {
+gulp.task('scsslint', function() {
 	return gulp.src(config.lint.targets.scss)
-		.pipe(scsslint());
+		.pipe(scsslint({
+			config: 'gulp/config/scsslint.yml'
+		}));
 });
 
 gulp.task('eslint', function() {
@@ -15,4 +17,4 @@ gulp.task('eslint', function() {
 		.pipe(eslint.failAfterError());
 });
 
-gulp.task('lint', ['scss-lint', 'eslint']);
+gulp.task('lint', ['scsslint', 'eslint']);

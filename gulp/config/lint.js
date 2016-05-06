@@ -1,7 +1,7 @@
 module.exports = {
 	targets: {
 		scss: [
-			'assets/scss/**/*.scss'
+			'src/scss/**/*.scss'
 		],
 		js: [
 			'gulp/work/js/merged/**/*.js',
