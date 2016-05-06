@@ -4,7 +4,7 @@ module.exports = {
 			'assets/scss/**/*.scss'
 		],
 		js: [
-			'gulp/work/merged/js/**/*.js',
+			'gulp/work/js/merged/**/*.js',
 			'gulp/task/**/*.js',
 			'gulp/config/**/*.js'
 		]
