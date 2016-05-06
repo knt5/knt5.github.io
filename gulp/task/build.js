@@ -2,8 +2,10 @@ var gulp = require('gulp');
 var glob = require('glob');
 var path = require('path');
 var fs = require('fs');
-var mustache = require('gulp-mustache');
 var rename = require('gulp-rename');
+var plumber = require('gulp-plumber');
+var mustache = require('gulp-mustache');
+var uglify = require('gulp-uglify');
 
 function getBaseNames() {
 	var baseNames = [];
@@ -15,7 +17,7 @@ function getBaseNames() {
 	return baseNames;
 }
 
-gulp.task('build:js', function(callback) {
+gulp.task('merge:js', function(callback) {
 	var baseNames = getBaseNames();
 	var doneCount = 0;
 	
@@ -28,6 +30,7 @@ gulp.task('build:js', function(callback) {
 		}
 		
 		gulp.src('src/js/' + baseName + '/' + baseName + '.js.mustache')
+			.pipe(plumber())
 			.pipe(mustache(params))
 			.pipe(rename(baseName + '.js'))
 			.pipe(gulp.dest('gulp/work/js/merged/'))
@@ -38,4 +41,11 @@ gulp.task('build:js', function(callback) {
 				}
 			});
 	}
+});
+
+gulp.task('build:js', ['merge:js'], function(callback) {
+	gulp.src('gulp/work/js/merged/*.js')
+		.pipe(plumber())
+		.pipe(uglify())
+		.pipe(gulp.dest('gulp/work/js/minified/'));
 });
