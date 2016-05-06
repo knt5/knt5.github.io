@@ -21,7 +21,7 @@ function getBaseNames() {
 }
 
 // JavaScript merge task (by mustache), depended by "eslint:built:dependedByBuildJsTask" task
-gulp.task('merge:js', function(callback) {
+gulp.task('build:merge:js', function(callback) {
 	var baseNames = getBaseNames();
 	var doneCount = 0;
 	
@@ -82,18 +82,20 @@ gulp.task('build:html', ['build:js', 'build:css'], function(callback) {
 			javascript: fs.readFileSync('gulp/work/js/minified/' + baseName + '.js').toString()
 		}, {}, partials))
 		.pipe(gulp.dest('gulp/work/html/merged/'))
-		.on('end', function() {
-			gulp.src('gulp/work/html/merged/' + baseName + '.html')
-			.pipe(plumber())
-			.pipe(htmlmin({ collapseWhitespace: true }))
-			.pipe(gulp.dest('./'))
-			.on('end', function() {
-				doneCount ++;
-				if (doneCount >= baseNames.length) {
-					callback();
-				}
-			});
-		});
+		.on('end', (function(baseName) {
+			return function() {
+				gulp.src('gulp/work/html/merged/' + baseName + '.html')
+				.pipe(plumber())
+				.pipe(htmlmin({ collapseWhitespace: true }))
+				.pipe(gulp.dest('./'))
+				.on('end', function() {
+					doneCount ++;
+					if (doneCount >= baseNames.length) {
+						callback();
+					}
+				});
+			};
+		})(baseName));
 	}
 });
 
