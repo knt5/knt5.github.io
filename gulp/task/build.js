@@ -32,31 +32,31 @@ gulp.task('merge:js', function(callback) {
 		}
 		
 		gulp.src('src/js/' + baseName + '/' + baseName + '.js.mustache')
-			.pipe(plumber())
-			.pipe(mustache(params))
-			.pipe(rename(baseName + '.js'))
-			.pipe(gulp.dest('gulp/work/js/merged/'))
-			.on('end', function() {
-				doneCount ++;
-				if (doneCount >= baseNames.length) {
-					callback();
-				}
-			});
+		.pipe(plumber())
+		.pipe(mustache(params))
+		.pipe(rename(baseName + '.js'))
+		.pipe(gulp.dest('gulp/work/js/merged/'))
+		.on('end', function() {
+			doneCount ++;
+			if (doneCount >= baseNames.length) {
+				callback();
+			}
+		});
 	}
 });
 
 gulp.task('build:js', ['merge:js'], function() {
 	return gulp.src('gulp/work/js/merged/*.js')
-		.pipe(plumber())
-		.pipe(uglify())
-		.pipe(gulp.dest('gulp/work/js/minified/'));
+	.pipe(plumber())
+	.pipe(uglify())
+	.pipe(gulp.dest('gulp/work/js/minified/'));
 });
 
 gulp.task('build:css', function() {
 	return sass('src/scss/**/*.scss', { style: 'compressed' })
-		.on('error', sass.logError)
-		.pipe(rename({ dirname: '' }))
-		.pipe(gulp.dest('gulp/work/css/built/'));
+	.on('error', sass.logError)
+	.pipe(rename({ dirname: '' }))
+	.pipe(gulp.dest('gulp/work/css/built/'));
 });
 
 gulp.task('build:html', ['build:js', 'build:css'], function(callback) {
@@ -71,24 +71,24 @@ gulp.task('build:html', ['build:js', 'build:css'], function(callback) {
 		}
 		
 		gulp.src('src/html/' + baseName + '.html')
+		.pipe(plumber())
+		.pipe(mustache({
+			css: fs.readFileSync('gulp/work/css/built/' + baseName + '.css').toString(),
+			javascript: fs.readFileSync('gulp/work/js/minified/' + baseName + '.js').toString()
+		}, {}, partials))
+		.pipe(gulp.dest('gulp/work/html/merged/'))
+		.on('end', function() {
+			gulp.src('gulp/work/html/merged/' + baseName + '.html')
 			.pipe(plumber())
-			.pipe(mustache({
-				css: fs.readFileSync('gulp/work/css/built/' + baseName + '.css').toString(),
-				javascript: fs.readFileSync('gulp/work/js/minified/' + baseName + '.js').toString()
-			}, {}, partials))
-			.pipe(gulp.dest('gulp/work/html/merged/'))
+			.pipe(htmlmin({ collapseWhitespace: true }))
+			.pipe(gulp.dest('./'))
 			.on('end', function() {
-				gulp.src('gulp/work/html/merged/' + baseName + '.html')
-					.pipe(plumber())
-					.pipe(htmlmin({ collapseWhitespace: true }))
-					.pipe(gulp.dest('./'))
-					.on('end', function() {
-						doneCount ++;
-						if (doneCount >= baseNames.length) {
-							callback();
-						}
-					});
+				doneCount ++;
+				if (doneCount >= baseNames.length) {
+					callback();
+				}
 			});
+		});
 	}
 });
 
