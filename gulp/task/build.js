@@ -16,7 +16,10 @@ function getBaseNames() {
 }
 
 gulp.task('build:js', function(callback) {
-	for (var baseName of getBaseNames()) {
+	var baseNames = getBaseNames();
+	var doneCount = 0;
+	
+	for (var baseName of baseNames) {
 		var params = {};
 		
 		for (var fileName of glob.sync('src/js/' + baseName + '/*.js')) {
@@ -27,8 +30,12 @@ gulp.task('build:js', function(callback) {
 		gulp.src('src/js/' + baseName + '/' + baseName + '.js.mustache')
 			.pipe(mustache(params))
 			.pipe(rename(baseName + '.js'))
-			.pipe(gulp.dest('gulp/work/js/merged/'));
+			.pipe(gulp.dest('gulp/work/js/merged/'))
+			.on('end', function() {
+				doneCount ++;
+				if(doneCount >= baseNames.length) {
+					callback();
+				}
+			});
 	}
-	
-	callback();
 });
