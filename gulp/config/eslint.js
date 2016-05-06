@@ -1,11 +1,9 @@
 module.exports = {
 	extends: 'eslint:recommended',
-	ecmaFeatures: {
-		modules: true
-	},
 	envs: [
 		'browser',
-		'node'
+		'node',
+		'es6'
 	],
 	globals: {
 		'$': true
