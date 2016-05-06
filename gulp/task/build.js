@@ -6,6 +6,7 @@ var rename = require('gulp-rename');
 var plumber = require('gulp-plumber');
 var mustache = require('gulp-mustache');
 var uglify = require('gulp-uglify');
+var sass = require('gulp-ruby-sass');
 
 function getBaseNames() {
 	var baseNames = [];
@@ -43,12 +44,18 @@ gulp.task('merge:js', function(callback) {
 	}
 });
 
-gulp.task('build:js', ['merge:js'], function(callback) {
-	gulp.src('gulp/work/js/merged/*.js')
+gulp.task('build:js', ['merge:js'], function() {
+	return gulp.src('gulp/work/js/merged/*.js')
 		.pipe(plumber())
 		.pipe(uglify())
-		.pipe(gulp.dest('gulp/work/js/minified/'))
-		.on('end', function() {
-			callback();
-		});
+		.pipe(gulp.dest('gulp/work/js/minified/'));
+});
+
+gulp.task('build:css', function() {
+	return sass('src/scss/**/*.scss', {style: 'compressed'})
+		.on('error', sass.logError)
+		.pipe(gulp.dest('gulp/work/css/compiled/'));
+});
+
+gulp.task('build', ['build:js', 'build:css'], function() {
 });
