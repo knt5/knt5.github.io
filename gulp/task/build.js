@@ -86,7 +86,10 @@ gulp.task('build:html', ['build:js', 'build:css'], function(callback) {
 			return function() {
 				gulp.src('gulp/work/html/merged/' + baseName + '.html')
 				.pipe(plumber())
-				.pipe(htmlmin({ collapseWhitespace: true }))
+				.pipe(htmlmin({
+					collapseWhitespace: true,
+					removeComments: true
+				}))
 				.pipe(gulp.dest('./'))
 				.on('end', function() {
 					doneCount ++;
