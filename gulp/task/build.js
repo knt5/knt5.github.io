@@ -9,6 +9,7 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-ruby-sass');
 var htmlmin = require('gulp-htmlmin');
 
+// Get build targets base name
 function getBaseNames() {
 	var baseNames = [];
 	
@@ -19,6 +20,7 @@ function getBaseNames() {
 	return baseNames;
 }
 
+// JavaScript merge task (by mustache), depended by "eslint:built:dependedByBuildJsTask" task
 gulp.task('merge:js', function(callback) {
 	var baseNames = getBaseNames();
 	var doneCount = 0;
@@ -45,13 +47,15 @@ gulp.task('merge:js', function(callback) {
 	}
 });
 
-gulp.task('build:js', ['merge:js'], function() {
+// JavaScript build task
+gulp.task('build:js', ['eslint:built:dependedByBuildJsTask'], function() {
 	return gulp.src('gulp/work/js/merged/*.js')
 	.pipe(plumber())
 	.pipe(uglify())
 	.pipe(gulp.dest('gulp/work/js/minified/'));
 });
 
+// CSS build task
 gulp.task('build:css', function() {
 	return sass('src/scss/**/*.scss', { style: 'compressed' })
 	.on('error', sass.logError)
@@ -59,6 +63,7 @@ gulp.task('build:css', function() {
 	.pipe(gulp.dest('gulp/work/css/built/'));
 });
 
+// HTML build task
 gulp.task('build:html', ['build:js', 'build:css'], function(callback) {
 	var baseNames = getBaseNames();
 	var doneCount = 0;
@@ -92,5 +97,6 @@ gulp.task('build:html', ['build:js', 'build:css'], function(callback) {
 	}
 });
 
+// Build all
 gulp.task('build', ['build:html'], function() {
 });
