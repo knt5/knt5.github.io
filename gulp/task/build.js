@@ -7,6 +7,7 @@ var plumber = require('gulp-plumber');
 var mustache = require('gulp-mustache');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-ruby-sass');
+var htmlmin = require('gulp-htmlmin');
 
 function getBaseNames() {
 	var baseNames = [];
@@ -27,7 +28,7 @@ gulp.task('merge:js', function(callback) {
 		
 		for (var fileName of glob.sync('src/js/' + baseName + '/*.js')) {
 			var name = path.basename(fileName, '.js');
-			params[name] = fs.readFileSync(fileName);
+			params[name] = fs.readFileSync(fileName).toString();
 		}
 		
 		gulp.src('src/js/' + baseName + '/' + baseName + '.js.mustache')
@@ -58,5 +59,38 @@ gulp.task('build:css', function() {
 		.pipe(gulp.dest('gulp/work/css/built/'));
 });
 
-gulp.task('build', ['build:js', 'build:css'], function() {
+gulp.task('build:html', ['build:js', 'build:css'], function(callback) {
+	var baseNames = getBaseNames();
+	var doneCount = 0;
+	
+	for (var baseName of baseNames) {
+		var partials = {};
+		
+		for (var name of glob.sync('src/html/parts/*.html')) {
+			partials[path.basename(name, '.html')] = fs.readFileSync(name).toString();
+		}
+		
+		gulp.src('src/html/' + baseName + '.html')
+			.pipe(plumber())
+			.pipe(mustache({
+				css: fs.readFileSync('gulp/work/css/built/' + baseName + '.css').toString(),
+				javascript: fs.readFileSync('gulp/work/js/minified/' + baseName + '.js').toString()
+			}, {}, partials))
+			.pipe(gulp.dest('gulp/work/html/merged/'))
+			.on('end', function() {
+				gulp.src('gulp/work/html/merged/' + baseName + '.html')
+					.pipe(plumber())
+					.pipe(htmlmin({ collapseWhitespace: true }))
+					.pipe(gulp.dest('./'))
+					.on('end', function() {
+						doneCount ++;
+						if (doneCount >= baseNames.length) {
+							callback();
+						}
+					});
+			});
+	}
+});
+
+gulp.task('build', ['build:html'], function() {
 });
