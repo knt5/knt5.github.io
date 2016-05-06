@@ -1,16 +1,16 @@
 module.exports = {
-	'extends': 'eslint:recommended',
-	'ecmaFeatures': {
-		'modules': true
+	extends: 'eslint:recommended',
+	ecmaFeatures: {
+		modules: true
 	},
-	'envs': [
+	envs: [
 		'browser',
 		'node'
 	],
 	globals: {
 		'$': true
 	},
-	'rules': {
+	rules: {
 		'camelcase': 2,
 		'comma-spacing': [2, {'before': false, 'after': true}],
 		'comma-style': [2, 'last'],
