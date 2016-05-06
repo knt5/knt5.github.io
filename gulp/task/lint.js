@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var plumber = require('gulp-plumber');
 var scsslint = require('gulp-scss-lint');
 var eslint = require('gulp-eslint');
 var config = require('../config/config');
@@ -6,6 +7,7 @@ var config = require('../config/config');
 // SCSS lint task
 gulp.task('scsslint', function() {
 	return gulp.src(config.lint.targets.scss)
+	.pipe(plumber())
 	.pipe(scsslint({
 		config: 'gulp/config/scsslint.yml'
 	}));
@@ -14,6 +16,7 @@ gulp.task('scsslint', function() {
 // JavaScript lint task
 gulp.task('eslint', function() {
 	return gulp.src(config.lint.targets.js)
+	.pipe(plumber())
 	.pipe(eslint(config.eslint))
 	.pipe(eslint.format())
 	.pipe(eslint.failAfterError());
@@ -22,6 +25,7 @@ gulp.task('eslint', function() {
 // Built JavaScript lint
 function lintBuiltJavaScript() {
 	return gulp.src(config.lint.targets.built.js)
+	.pipe(plumber())
 	.pipe(eslint(config.eslint))
 	.pipe(eslint.format())
 	.pipe(eslint.failAfterError());
@@ -33,7 +37,7 @@ gulp.task('eslint:built', function() {
 });
 
 // Built JavaScript lint task, depended by "build:js" task
-gulp.task('eslint:built:dependedByBuildJsTask', ['merge:js'], function() {
+gulp.task('eslint:built:dependedByBuildJsTask', ['build:merge:js'], function() {
 	return lintBuiltJavaScript();
 });
 
