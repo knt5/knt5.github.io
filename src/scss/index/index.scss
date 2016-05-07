@@ -107,7 +107,25 @@
 	}
 }
 
+//============================== product ==============================
+
+.product {
+	margin-top: 60px;
+	
+	h2 {
+		text-align: center;
+		font-size: 55px;
+		font-weight: normal;
+		letter-spacing: 1px;
+		
+		+p {
+			text-align: center;
+		}
+	}
+}
+
 //============================== media:500 ==============================
+
 @media (max-width: 500px) {
 	.github-ribbon {
 		img {
@@ -118,6 +136,7 @@
 }
 
 //============================== media:$content-width ==============================
+
 @media (max-width: $content-width) {
 	.header-box {
 		width: auto;

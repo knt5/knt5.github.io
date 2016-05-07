@@ -1,6 +1,8 @@
+//============================== footer ==============================
+
 .footer {
-	margin-top: 40px;
-	padding: 30px 20px 60px;
+	margin-top: 60px;
+	padding: 20px 20px 60px;
 	width: 100%;
 	background: linear-gradient(to left, #4b6cb7 , #182848);
 	color: #fff;
@@ -23,18 +25,26 @@
 	}
 }
 
+//============================== copyright ==============================
+
 .footer-copyright {
-	margin-top: 30px;
+	margin-top: 40px;
 	font-size: 12px;
 	text-align: center;
 	font-family: "GillSans";  // for iOS
 }
 
-.footer-sns-link-list-box {
+//============================== links ==============================
+
+.footer-link-list-box {
 	margin-top: 20px;
 }
 
-.footer-sns-link-list {
+.footer-link-list {
+	display: block;
+	float: left;
+	margin-top: 20px;
+	margin-left: 60px;
 	font-size: 16px;
 	
 	li {
@@ -47,13 +57,30 @@
 	}
 }
 
+.footer-link-list:nth-child(1) {
+	margin-left: 0;
+}
+
+//============================== icon ==============================
+
 .footer-icon {
 	width: 16px;
 	height: 16px;
 }
 
+//============================== media:$content-width ==============================
+
 @media (max-width: $content-width) {
 	.footer-box {
 		width: auto;
+	}
+}
+
+//============================== media:500px ==============================
+
+@media (max-width: 500px) {
+	.footer-link-list {
+		float: none;
+		margin-left: 0px;
 	}
 }
