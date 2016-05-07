@@ -9,6 +9,7 @@ body {
 	color: #333;
 	font-size: 18px;
 	line-height: 1.4;
+	-webkit-text-size-adjust: 100%;  // for iOS Safari
 }
 
 body, input, select, textarea, th, td {
