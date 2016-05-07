@@ -50,6 +50,7 @@
 	color: #999;
 	line-height: 1.1;
 	text-align: center;
+	font-family: "GillSans";  // for iOS
 	
 	img {
 		width: 15px;
@@ -65,9 +66,9 @@
 	width: $content-width;
 }
 
-//============================== profile ==============================
+//============================== section ==============================
 
-.profile {
+.section {
 	margin-top: 60px;
 	
 	h2 {
@@ -75,6 +76,13 @@
 		font-size: 55px;
 		font-weight: normal;
 		letter-spacing: 2px;
+	}
+	
+	h3 {
+		margin-top: 50px;
+		text-align: center;
+		font-size: 30px;
+		font-weight: normal;
 	}
 	
 	ul {
@@ -90,13 +98,6 @@
 		font-weight: bold;
 	}
 	
-	h3 {
-		margin-top: 24px;
-		text-align: center;
-		font-size: 30px;
-		font-weight: normal;
-	}
-	
 	p {
 		margin-top: 10px;
 		text-align: center;
@@ -107,21 +108,18 @@
 	}
 }
 
+//============================== profile ==============================
+
+.profile {
+	h3 {
+		margin-top: 25px;
+	}
+}
+
 //============================== product ==============================
 
 .product {
-	margin-top: 60px;
 	
-	h2 {
-		text-align: center;
-		font-size: 55px;
-		font-weight: normal;
-		letter-spacing: 1px;
-		
-		+p {
-			text-align: center;
-		}
-	}
 }
 
 //============================== media:500 ==============================
