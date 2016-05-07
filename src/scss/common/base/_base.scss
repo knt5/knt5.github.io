@@ -12,7 +12,7 @@ body {
 }
 
 body, input, select, textarea, th, td {
-	font-family: "Myriad Pro", "Lucida Grande",
+	font-family: "Myriad Pro", "Lucida Grande", "AvenirNext-Regular", "GillSans",
 		"Hiragino Kaku Gothic Pro", "Meiryo", "sans-serif";
 }
 
@@ -22,6 +22,10 @@ a {
 
 a:link, a:visited, a:active {
 	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 .clearfix::after {

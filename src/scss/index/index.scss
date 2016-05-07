@@ -1,32 +1,153 @@
 @import '../common/base/base';
 @import '../common/parts/footer';
 
+//============================== header ==============================
+
+.header {
+	position: relative;
+	background: linear-gradient(to left, #ff4e50 , #ffc500);
+	color: #fff;
+	font-family: "GillSans";  // for iOS
+}
+
+.header-box {
+	margin: 0 auto;
+	padding: 60px 0 80px;
+	width: $content-width;
+	
+	h1 {
+		font-size: 60px;
+		font-weight: normal;
+		line-height: 1.1;
+	}
+	
+	span {
+		font-size: 20px;
+	}
+}
+
+.header-image-box {
+	position: relative;
+	margin: 0 auto 150px;
+	width: $header-image-size;
+}
+
+.header-image {
+	position: absolute;
+	top: -70px;
+	width: $header-image-size;
+	height: $header-image-size;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	background-color: #fff;
+	background-image: url('/assets/img/knt5.jpg');
+	background-size: $header-image-size $header-image-size;
+	box-shadow: 0 2px 6px 1px #999;
+}
+
+.header-image-desc {
+	font-size: 12px;
+	color: #999;
+	line-height: 1.1;
+	text-align: center;
+	
+	img {
+		width: 15px;
+		height: 10px;
+	}
+}
+
+//============================== main ==============================
+
 .main {
 	margin: 20px auto 0;
 	padding: 0 20px;
-	width: $width;
+	width: $content-width;
 }
 
+//============================== profile ==============================
+
 .profile {
+	margin-top: 60px;
+	
 	h2 {
 		text-align: center;
 		font-size: 55px;
 		font-weight: normal;
 		letter-spacing: 2px;
 	}
+	
 	ul {
 		margin-top: 10px;
 	}
+	
+	li {
+		display: block;
+		padding-bottom: 4px;
+	}
+	
 	span {
 		font-weight: bold;
 	}
+	
+	h3 {
+		margin-top: 24px;
+		text-align: center;
+		font-size: 30px;
+		font-weight: normal;
+	}
+	
+	p {
+		margin-top: 10px;
+		text-align: center;
+	}
+	
 	strong {
 		color: #f73;
 	}
 }
 
-@media (max-width: $width) {
+//============================== media:500 ==============================
+@media (max-width: 500px) {
+	.github-ribbon {
+		img {
+			width: 80px;
+			height: 80px;
+		}
+	}
+}
+
+//============================== media:$content-width ==============================
+@media (max-width: $content-width) {
+	.header-box {
+		width: auto;
+		padding: 40px 0;
+		text-align: center;
+		
+		h1 {
+			font-size: 40px;
+		}
+	}
+	
+	.header-image-box {
+		width: $small-header-image-size;
+	}
+	
+	.header-image {
+		top: -20px;
+		width: $small-header-image-size;
+		height: $small-header-image-size;
+		border-width: 4px;
+		background-size: $small-header-image-size $small-header-image-size;
+	}
+	
 	.main {
 		width: auto;
+	}
+	
+	.profile {
+		h2 {
+			font-size: 40px;
+		}
 	}
 }

@@ -1,24 +1,58 @@
 .footer {
 	margin-top: 40px;
-	padding: 40px 20px 60px;
+	padding: 30px 20px 60px;
 	width: 100%;
-	background: #eee;
+	background: linear-gradient(to left, #4b6cb7 , #182848);
+	color: #fff;
 }
 
 .footer-box {
 	margin: 0 auto;
-	width: $width;
-	color: #666;
+	width: $content-width;
+	
+	a {
+		color: #fff;
+	}
+	
+	a:link, a:visited, a:active {
+		text-decoration: underline;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
 }
 
 .footer-copyright {
 	margin-top: 30px;
 	font-size: 12px;
 	text-align: center;
-	color: #888;
+	font-family: "GillSans";  // for iOS
 }
 
-@media (max-width: $width) {
+.footer-sns-link-list-box {
+	margin-top: 20px;
+}
+
+.footer-sns-link-list {
+	font-size: 16px;
+	
+	li {
+		display: block;
+		padding-bottom: 8px;
+	}
+	
+	span {
+		font-size: 11px;
+	}
+}
+
+.footer-icon {
+	width: 16px;
+	height: 16px;
+}
+
+@media (max-width: $content-width) {
 	.footer-box {
 		width: auto;
 	}
