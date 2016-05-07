@@ -13,3 +13,6 @@ linters:
 
   PropertySortOrder:
     enabled: false
+
+  TrailingWhitespace:
+    enabled: false
