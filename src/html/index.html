@@ -29,7 +29,7 @@
 	</header>
 	
 	<div class="header-image-box">
-		<div class="header-image"></div>
+		<div id="js-header-image" class="header-image"></div>
 	</div>
 	
 	<div class="header-image-desc">
@@ -112,6 +112,8 @@
 	{{> footer }}
 	
 	<!-- ========================= js ========================= -->
+	<script src="/assets/js/lib/jquery.min.js?v=3.0.0-beta1"></script>
+	<script src="/assets/js/lib/jquery-canvas-sparkles.min.js?v=1.0.1"></script>
 	<script>{{{ javascript }}}</script>
 	<script src="/assets/js/analytics.js"></script>
 </body>
