@@ -1,0 +1,178 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=500">
+	<title>Programming language percentage in my heart - Kenta Motomura</title>
+	<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+	<link rel="apple-touch-icon" type="image/png" href="/assets/img/favicon.png">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "Arial";
+		}
+		
+		a {
+			color: #04f;
+		}
+		
+		a:hover {
+			text-decoration: none;
+		}
+		
+		.copyright {
+			display: block;
+			margin-top: 20px;
+			width: 500px;
+			text-align: center;
+			font-size: 11px;
+			color: #666;
+		}
+	</style>
+</head>
+<body>
+
+<div id="pieChart"></div>
+
+<span class="copyright">© <a href="https://knt5.github.io/">knt5</a></span>
+
+<script src="d3.min.js"></script>
+<script src="d3pie.min.js"></script>
+<script>
+var pie = new d3pie("pieChart", {
+	"header": {
+		"title": {
+			"fontSize": 24,
+			"font": "open sans"
+		},
+		"subtitle": {
+			"color": "#999999",
+			"fontSize": 12,
+			"font": "open sans"
+		},
+		"titleSubtitlePadding": 9
+	},
+	"footer": {
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-left"
+	},
+	"size": {
+		"pieOuterRadius": "80%"
+	},
+	"data": {
+		"content": [
+			{
+				"label": "C",
+				"value": 60,
+				"color": "#e98125"
+			},
+			{
+				"label": "JavaScript",
+				"value": 60,
+				"color": "#fff467"
+			},
+			{
+				"label": "Python",
+				"value": 16,
+				"color": "#ffc595"
+			},
+			{
+				"label": "Sass",
+				"value": 9,
+				"color": "#923e99"
+			},
+			{
+				"label": "Objective-C",
+				"value": 9,
+				"color": "#e65414"
+			},
+			{
+				"label": "Java",
+				"value": 6,
+				"color": "#ee6a6a"
+			},
+			{
+				"label": "C#",
+				"value": 5,
+				"color": "#53d0ff"
+			},
+			{
+				"label": "CSS",
+				"value": 5,
+				"color": "#8ce679"
+			},
+			{
+				"label": "HTML",
+				"value": 3,
+				"color": "#f8c685"
+			},
+			{
+				"label": "PHP",
+				"value": 2,
+				"color": "#d09fe4"
+			},
+			{
+				"label": "Perl",
+				"value": 1,
+				"color": "#79b3ff"
+			},
+			{
+				"label": "Others",
+				"value": 4,
+				"color": "#ffd3f6"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"pieDistance": 28
+		},
+		"inner": {
+			"hideWhenLessThanPercentage": 3
+		},
+		"mainLabel": {
+			"fontSize": 11
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 11
+		},
+		"lines": {
+			"enabled": true
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"tooltips": {
+		"enabled": true,
+		"type": "placeholder",
+		"string": "{label}"
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "elastic",
+			"speed": 200,
+			"size": 8
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 100,
+			"color": "#ff6666"
+		}
+	}
+});
+</script>
+
+<script src="/assets/js/analytics.js"></script>
+
+</body>
+</html>
