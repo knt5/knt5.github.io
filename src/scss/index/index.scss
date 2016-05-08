@@ -7,7 +7,7 @@
 	position: relative;
 	background: linear-gradient(to left, #ff4e50 , #ffc500);
 	color: #fff;
-	font-family: "GillSans";  // for iOS
+	font-family: 'GillSans';  // for iOS
 }
 
 .header-box {
@@ -50,7 +50,7 @@
 	color: #999;
 	line-height: 1.1;
 	text-align: center;
-	font-family: "GillSans";  // for iOS
+	font-family: 'GillSans';  // for iOS
 	
 	img {
 		width: 15px;
@@ -79,19 +79,9 @@
 	}
 	
 	h3 {
-		margin-top: 50px;
 		text-align: center;
 		font-size: 30px;
 		font-weight: normal;
-	}
-	
-	ul {
-		margin-top: 10px;
-	}
-	
-	li {
-		display: block;
-		padding-bottom: 4px;
 	}
 	
 	span {
@@ -114,12 +104,33 @@
 	h3 {
 		margin-top: 25px;
 	}
+	
+	ul {
+		padding: 0;
+		margin-top: 10px;
+	}
+	
+	li {
+		display: block;
+		padding-bottom: 4px;
+	}
 }
 
 //============================== product ==============================
 
 .product {
+	h3 {
+		margin-top: 50px;
+	}
 	
+	hr {
+		margin: 50px auto 0;
+		width: 75%;
+	}
+	
+	li {
+		margin-left: 20px;
+	}
 }
 
 .product-japan-flag {
@@ -128,10 +139,14 @@
 }
 
 .product-cubox-screen-shot {
+	margin-top: 8px;
 	width: 100%;
 	max-width: 871px;
-	border: 1px solid #bbb;
-	padding: 12px;
+}
+
+.product-cubox-desc-list {
+	margin-top: 12px;
+	padding: 0;
 }
 
 //============================== media:500 ==============================
