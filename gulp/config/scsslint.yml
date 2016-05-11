@@ -16,3 +16,6 @@ linters:
 
   TrailingWhitespace:
     enabled: false
+
+  VendorPrefix:
+    enabled: false
