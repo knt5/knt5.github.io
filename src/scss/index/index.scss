@@ -64,19 +64,9 @@ h2, h3 {
 	}
 }
 
-//============================== main ==============================
-
-.main {
-	margin: 20px auto 0;
-	padding: 0 20px;
-	width: $content-width;
-}
-
 //============================== section ==============================
 
 .section {
-	margin-top: 60px;
-	
 	h2 {
 		text-align: center;
 		font-size: 55px;
@@ -102,6 +92,13 @@ h2, h3 {
 	strong {
 		color: #f73;
 	}
+}
+
+.profile,
+.product {
+	margin: 60px auto 0;
+	padding: 0 20px;
+	width: $content-width;
 }
 
 //============================== profile ==============================
@@ -213,17 +210,18 @@ h2, h3 {
 	border: 1px solid #999;
 }
 
-//============================== product:cubox ==============================
+//============================== product:hakoniwa ==============================
 
-.product-cubox-screen-shot {
-	margin: 5px 5px 0 0;
-	width: 100%;
-	max-width: 420px;
-}
-
-.product-cubox-desc-list {
-	margin-top: 12px;
-	padding: 0;
+.product-hakoniwa {
+	background: #000;
+	background-image: linear-gradient(to left, #434343, #000);
+	color: #fff;
+	width: auto;
+	padding: 60px 0;
+	
+	h3 {
+		margin-top: 0;
+	}
 }
 
 //============================== product:console-artist ==============================
@@ -247,6 +245,19 @@ h2, h3 {
 	margin-top: 8px;
 	width: 100%;
 	max-width: 546px;
+}
+
+//============================== product:cubox ==============================
+
+.product-cubox-screen-shot {
+	margin: 5px 5px 0 0;
+	width: 100%;
+	max-width: 420px;
+}
+
+.product-cubox-desc-list {
+	margin-top: 12px;
+	padding: 0;
 }
 
 //============================== media:$content-width ==============================
@@ -276,13 +287,10 @@ h2, h3 {
 		background-size: $small-header-image-size $small-header-image-size;
 	}
 	
-	//============================== main ==============================
-	.main {
+	//============================== sections ==============================
+	.profile, .product {
 		width: auto;
-	}
-	
-	//============================== profile ==============================
-	.profile {
+		
 		h2 {
 			font-size: 40px;
 		}
