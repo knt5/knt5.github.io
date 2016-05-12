@@ -20,7 +20,7 @@ function getBaseNames() {
 	return baseNames;
 }
 
-// JavaScript merge task (by mustache), depended by "eslint:built:dependedByBuildJsTask" task
+// JavaScript merge task (with mustache)
 gulp.task('build:merge:js', function(callback) {
 	var baseNames = getBaseNames();
 	var doneCount = 0;
@@ -48,7 +48,7 @@ gulp.task('build:merge:js', function(callback) {
 });
 
 // JavaScript build task
-gulp.task('build:js', ['eslint:built:dependedByBuildJsTask'], function() {
+gulp.task('build:js', ['build:merge:js'], function() {
 	return gulp.src('gulp/work/js/merged/*.js')
 	.pipe(plumber())
 	.pipe(uglify())

@@ -8,6 +8,9 @@ module.exports = {
 			'gulp/config/**/*.js'
 		],
 		built: {
+			html: [
+				'gulp/work/html/merged/**/*.html'
+			],
 			js: [
 				'gulp/work/js/merged/**/*.js'
 			]
