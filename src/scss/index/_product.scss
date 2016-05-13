@@ -1,0 +1,91 @@
+
+//============================== product ==============================
+
+.product {
+	h3 {
+		margin-top: 45px;
+	}
+	
+	hr {
+		margin: 75px auto 0;
+		width: 75%;
+	}
+	
+	li {
+		margin-left: 20px;
+	}
+}
+
+.product-japan-flag {
+	height: 14px;
+	border: 1px solid #999;
+}
+
+//============================== product:hakoniwa ==============================
+
+.product-hakoniwa {
+	background: #000;
+	background-image: linear-gradient(to left, #434343, #000);
+	color: #fff;
+	width: auto;
+	padding: 60px 0;
+	
+	h3 {
+		margin-top: 0;
+	}
+}
+
+//============================== product:console-artist ==============================
+
+.product-console-artist-screen-shot-box {
+	width: 802px;
+	margin: 0 auto;
+}
+
+.product-console-artist-screen-shot-vertical {
+	display: block;
+	float: left;
+	margin: 8px 8px 0 0;
+	width: 100%;
+	max-width: 248px;
+}
+
+.product-console-artist-screen-shot {
+	display: block;
+	float: left;
+	margin-top: 8px;
+	width: 100%;
+	max-width: 546px;
+}
+
+//============================== product:cubox ==============================
+
+.product-cubox-screen-shot {
+	margin: 5px 5px 0 0;
+	width: 100%;
+	max-width: 420px;
+}
+
+.product-cubox-desc-list {
+	margin-top: 12px;
+	padding: 0;
+}
+
+//============================== media:842 (console-art ss) ==============================
+
+@media (max-width: 842px) {
+	.product-console-artist-screen-shot-box {
+		width: auto;
+		text-align: center;
+	}
+	
+	.product-console-artist-screen-shot-vertical {
+		display: inline;
+		float: none;
+	}
+	
+	.product-console-artist-screen-shot {
+		display: inline;
+		float: none;
+	}
+}
