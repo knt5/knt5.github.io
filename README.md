@@ -1,19 +1,15 @@
-# Portfolio web site of knt5
+# Portfolio site of knt5
 
 https://knt5.github.io/
 
-## Development enviroment
-
-Install gems for gulp tasks.
+## Installation
 
 ```
+# Gems
 gem install sass
 gem install scss_lint
-```
 
-Run npm install.
-
-```
+# npm
 npm install -g gulp
 npm install
 ```
