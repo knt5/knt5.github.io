@@ -2,14 +2,20 @@
 
 https://knt5.github.io/
 
-## Installation
+## Installation for development
 
 ```
-# Gems
+# Install gems
 gem install sass
 gem install scss_lint
 
-# npm
+# Install npm packages
 npm install -g gulp
 npm install
+
+# Build
+gulp build
+
+# Watch
+gulp
 ```
