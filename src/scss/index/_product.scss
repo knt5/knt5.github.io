@@ -87,6 +87,19 @@
 	max-width: 860px;
 }
 
+//============================== product:cubox ==============================
+
+.product-cubox-screen-shot {
+	margin: 5px 5px 0 0;
+	width: 100%;
+	max-width: 420px;
+}
+
+.product-cubox-desc-list {
+	margin-top: 12px;
+	padding: 0;
+}
+
 //============================== product:console-artist ==============================
 
 .product-console-artist-screen-shot-box {
@@ -110,19 +123,6 @@
 	max-width: 546px;
 }
 
-//============================== product:cubox ==============================
-
-.product-cubox-screen-shot {
-	margin: 5px 5px 0 0;
-	width: 100%;
-	max-width: 420px;
-}
-
-.product-cubox-desc-list {
-	margin-top: 12px;
-	padding: 0;
-}
-
 //============================== media:842 (console-art ss) ==============================
 
 @media (max-width: 842px) {
@@ -132,8 +132,9 @@
 	}
 	
 	.product-console-artist-screen-shot-vertical {
-		display: inline;
-		float: none;
+		//display: inline;
+		//float: none;
+		display: none;
 	}
 	
 	.product-console-artist-screen-shot {
