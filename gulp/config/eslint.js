@@ -6,8 +6,6 @@ module.exports = {
 		'es6',
 		'jquery'
 	],
-	globals: {
-	},
 	rules: {
 		'camelcase': 2,
 		'comma-spacing': [2, {'before': false, 'after': true}],
