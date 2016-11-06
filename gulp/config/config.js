@@ -1,5 +1,7 @@
+const lint = require('./lint');
+const build = require('./build');
+
 module.exports = {
-	lint: require('./lint'),
-	eslint: require('./eslint'),
-	build: require('./build')
+	lint,
+	build,
 };
