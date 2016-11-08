@@ -23,3 +23,7 @@ node_modules
 
 # Gulp working directory
 gulp/work/
+
+# Selenium error screenshots
+test/e2e/result/*
+!test/e2e/result/.gitkeep
