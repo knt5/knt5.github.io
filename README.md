@@ -25,15 +25,16 @@ gulp
 ### For test
 
 ```
-# Install selenium-standalone
-npm install -g selenium-standalone
+# Install selenium-server-standalone (^3.0.1)
+wget -O test/e2e/bin/selenium-server-standalone.jar \
+  http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar
 
-# Install selenium-server-standalone, ChromeDriver and GeckoDriver
-selenium-standalone install
+# Install ChromeDriver and GeckoDriver
+brew install chromedriver geckodriver
 
-# Run SafariDriver (Safari 10+) with listening port 7055
-safaridriver -p 0
+# Run selenium-server-standalone
+npm run selenium
 
-# Run selenium standalone server
-selenium-standalone start
+# Run E2E test
+npm run test:e2e
 ```
