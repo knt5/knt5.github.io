@@ -2,7 +2,9 @@
 
 https://knt5.github.io/
 
-## Installation for development
+## Installation
+
+### For development
 
 ```
 # Install gems
@@ -18,4 +20,20 @@ gulp build
 
 # Watch
 gulp
+```
+
+### For test
+
+```
+# Install selenium-standalone
+npm install -g selenium-standalone
+
+# Install selenium-server-standalone, ChromeDriver and GeckoDriver
+selenium-standalone install
+
+# Run SafariDriver (Safari 10+) with listening port 7055
+safaridriver -p 0
+
+# Run selenium standalone server
+selenium-standalone start
 ```
