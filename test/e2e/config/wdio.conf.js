@@ -8,6 +8,12 @@ module.exports = {
 		capabilities: [{
 			maxInstances: 5,
 			browserName: 'chrome',
+		}, {
+			maxInstances: 5,
+			browserName: 'firefox',
+		}, {
+			maxInstances: 5,
+			browserName: 'safari',
 		}],
 		sync: true,
 		logLevel: 'verbose',
