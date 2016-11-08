@@ -4,7 +4,7 @@
   "author": "knt5",
   "scripts": {
     "test:e2e": "wdio test/e2e/config/wdio.conf.js",
-    "test:smoke": "mocha --color --reporter spec --timeout 120000 'test/smoke/**/*.spec.js'",
+    "test:smoke": "mocha --color --reporter spec --timeout 120000 'test/smoke/**/*.smoke.js'",
     "selenium": "java -jar test/e2e/bin/selenium-server-standalone.jar"
   },
   "devDependencies": {
