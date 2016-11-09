@@ -22,7 +22,7 @@ gulp build
 gulp
 ```
 
-### For test
+### For E2E test
 
 ```
 # Install selenium-server-standalone (^3.0.1)
@@ -37,4 +37,11 @@ npm run selenium
 
 # Run E2E test
 npm run test:e2e
+```
+
+### For smoke test
+
+```
+# Run smoke test
+npm run test:smoke
 ```
