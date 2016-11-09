@@ -4,6 +4,9 @@ module.exports = {
 	config: {
 		specs: ['test/e2e/spec/**/*.spec.js'],
 		exclude: [],
+		plugins: {
+			'wdio-screenshot': {},
+		},
 		maxInstances: 10,
 		capabilities: [{
 			maxInstances: 5,
@@ -27,8 +30,9 @@ module.exports = {
 		reporters: ['spec'],
 		mochaOpts: {
 			ui: 'bdd',
+			timeout: 300000,
 		},
-		before: (capabilities, specs) => {
+		before: () => {  // capabilities, specs
 			global.expect = chai.expect;
 		},
 	},
