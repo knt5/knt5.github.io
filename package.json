@@ -27,6 +27,7 @@
     "require-dir": "^0.3.1",
     "supertest": "^2.0.1",
     "wdio-mocha-framework": "^0.5.2",
+    "wdio-screenshot": "^0.3.0",
     "wdio-spec-reporter": "0.0.3",
     "webdriverio": "^4.3.0"
   }
