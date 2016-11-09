@@ -10,6 +10,9 @@ describe('Smoke testing: index page', () => {
 	const maxRidirects = 2;
 
 	it('Every link response is 200', (done) => {
+		const links = [];
+		let count = 0;
+
 		request(base)
 			.get(path)
 			.end((err, res) => {
@@ -17,7 +20,6 @@ describe('Smoke testing: index page', () => {
 					done(err);
 				} else {
 					const $ = cheerio.load(res.text);
-					const links = [];
 
 					$('a').each((i, el) => {
 						const link = $(el).prop('href');
@@ -26,40 +28,40 @@ describe('Smoke testing: index page', () => {
 						}
 					});
 
-					let count = 0;
 					testLink(0);
-					function testLink(i) {
-						const link = links[i];
-						let url;
-
-						if (link.match(/^http[s]?:\/\//)) {
-							url = link;
-						} else if (link.startsWith('/')) {
-							url = base + link;
-						} else {
-							url = base + path + link;
-						}
-
-						console.log(`      ${url}`);
-
-						request(url)
-							.head('')
-							.redirects(maxRidirects)
-							.expect(200)
-							.end((error) => {
-								if (error) {
-									done(error);
-								} else {
-									count++;
-									if (count < links.length) {
-										testLink(i + 1);
-									} else {
-										done();
-									}
-								}
-							});
-					}
 				}
 			});
+
+		function testLink(i) {
+			const link = links[i];
+			let url;
+
+			if (link.match(/^http[s]?:\/\//)) {
+				url = link;
+			} else if (link.startsWith('/')) {
+				url = base + link;
+			} else {
+				url = base + path + link;
+			}
+
+			console.log(`      ${url}`);
+
+			request(url)
+				.head('')
+				.redirects(maxRidirects)
+				.expect(200)
+				.end((error) => {
+					if (error) {
+						done(error);
+					} else {
+						count++;
+						if (count < links.length) {
+							testLink(i + 1);
+						} else {
+							done();
+						}
+					}
+				});
+		}
 	});
 });
