@@ -5,5 +5,9 @@ module.exports = {
 		node: true,
 		es6: true,
 		jquery: true,
+		mocha: true,
+	},
+	globals: {
+		browser: true,
 	},
 };
