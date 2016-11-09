@@ -6,6 +6,7 @@ module.exports = {
 		js: [
 			'gulp/task/**/*.js',
 			'gulp/config/**/*.js',
+			'test/**/*.js',
 		],
 		built: {
 			html: [
