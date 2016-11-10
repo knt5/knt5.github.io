@@ -11,7 +11,7 @@ describe('index page', () => {
 
 	it('Render the page on any browsers. (This is not a test)', () => {
 		browser
-			.windowHandleSize({width: 1000, height: 800})
+			.windowHandleSize({ width: 1000, height: 800 })
 			.saveDocumentScreenshot(
 				`test/e2e/result/${browser.desiredCapabilities.browserName}.png`);
 	});
