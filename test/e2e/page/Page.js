@@ -1,6 +1,10 @@
 class Page {
-	open(path) {
-		browser.url(path);
+	constructor(path) {
+		this.path = path;
+	}
+
+	open() {
+		browser.url(this.path);
 	}
 }
 
