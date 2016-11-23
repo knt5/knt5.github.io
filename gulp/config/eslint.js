@@ -10,4 +10,7 @@ module.exports = {
 	globals: {
 		browser: true,
 	},
+	rules: {
+		'prefer-arrow-callback': 'off',
+	},
 };
