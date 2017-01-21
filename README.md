@@ -4,7 +4,7 @@ https://knt5.github.io/
 
 ## Installation
 
-### For development
+### Development
 
 ```
 # Install gems
@@ -31,7 +31,13 @@ wget -O test/e2e/bin/selenium-server-standalone.jar \
 
 # Install ChromeDriver and GeckoDriver
 brew install chromedriver geckodriver
+```
 
+## Testing
+
+### E2E test
+
+```
 # Run selenium-server-standalone
 npm run selenium
 
@@ -39,9 +45,8 @@ npm run selenium
 npm run test:e2e
 ```
 
-### For smoke test
+### Smoke test
 
 ```
-# Run smoke test
 npm run test:smoke
 ```
