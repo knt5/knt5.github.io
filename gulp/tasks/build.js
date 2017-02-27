@@ -43,7 +43,7 @@ gulp.task('build', () => {
 
 //=============================================================================
 // Rename a file to base name of the parent directory (for gulp-rename)
-function toDirBase(filePath) => {
+function toDirBase(filePath) {
 	filePath.basename = path.basename(filePath.dirname);
 	filePath.dirname = '';
 }
