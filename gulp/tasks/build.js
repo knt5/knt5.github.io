@@ -13,7 +13,7 @@ const htmlmin = require('gulp-htmlmin');
 
 // JavaScript
 const webpack = require('webpack');
-const gulpWebpack = require('gulp-webpack');
+const webpackStream = require('webpack-stream');
 const named = require('vinyl-named');
 
 // CSS
@@ -45,7 +45,7 @@ gulp.task('build', (done) => {
 		.pipe(named((file) => {
 			return path.dirname(file.relative);
 		}))
-		.pipe(gulpWebpack({
+		.pipe(webpackStream({
 			module: {
 				loaders: [{
 					loader: 'babel-loader',
