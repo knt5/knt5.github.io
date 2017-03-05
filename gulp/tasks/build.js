@@ -35,8 +35,9 @@ const config = {
 
 //=============================================================================
 gulp.task('build', (done) => {
-	
-	gulp.src(`${config.js.base}/views/**/app.js`)  // JavaScript
+	//-------------------------------------------------------------------------
+	// JavaScript
+	gulp.src(`${config.js.base}/views/**/app.js`)
 		.pipe(named((file) => {
 			return 'views/' + path.dirname(file.relative);
 		}))
@@ -47,9 +48,15 @@ gulp.task('build', (done) => {
 					query: { presets: ['es2015'] }
 				}],
 			},
+			plugins: [
+				new webpack.optimize.UglifyJsPlugin(),
+			],
 		}))
 		.pipe(gulp.dest(config.tmp))
 		.on('end', () => {
+			//-----------------------------------------------------------------
+			// HTML
+			
 			// Get mustache partials
 			const partials = getPartials();
 			
