@@ -1,4 +1,4 @@
-$(function () {
+$(() => {
 	$('#js-header-image').sparkle({
 		direction: 'down',
 		speed: 0.4,
