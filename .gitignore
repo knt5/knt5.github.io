@@ -1,28 +1,20 @@
+# Mac OS X
+.DS_Store
+
+# Node.js, npm
+node_modules
+.npm
+
 # Logs
 logs
 *.log
 npm-debug.log*
 
-# Coverage directory used by tools like istanbul
-coverage
-
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
-
-# Dependency directory
-node_modules
-
-# Optional npm cache directory
-.npm
-
-# Hidden meta data file of Mac OS X
-.DS_Store
-
 # Sass cache directory
 .sass-cache
 
-# Gulp working directory
-gulp/work/
+#  Working directory
+gulp/tmp/
 
 # Selenium
 test/e2e/bin/*
