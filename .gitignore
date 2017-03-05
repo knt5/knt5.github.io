@@ -3,15 +3,11 @@
 
 # Node.js, npm
 node_modules
-.npm
 
 # Logs
 logs
 *.log
 npm-debug.log*
-
-# Sass cache directory
-.sass-cache
 
 #  Working directory
 gulp/tmp/
