@@ -8,6 +8,9 @@
     "selenium": "java -jar test/e2e/bin/selenium-server-standalone.jar"
   },
   "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
     "chai": "^3.5.0",
     "cheerio": "^0.22.0",
     "eslint-config-knt5-base": "^1.0.3",
@@ -23,12 +26,15 @@
     "gulp-ruby-sass": "^2.1.1",
     "gulp-scss-lint": "^0.4.0",
     "gulp-uglify": "^2.0.0",
+    "gulp-webpack": "^1.5.0",
     "mocha": "^3.1.2",
     "require-dir": "^0.3.1",
     "supertest": "^2.0.1",
+    "vinyl-named": "^1.1.0",
     "wdio-mocha-framework": "^0.5.2",
     "wdio-screenshot": "^0.3.0",
     "wdio-spec-reporter": "0.0.3",
-    "webdriverio": "^4.3.0"
+    "webdriverio": "^4.3.0",
+    "webpack": "^2.2.1"
   }
 }
