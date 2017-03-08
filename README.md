@@ -7,10 +7,6 @@ https://knt5.github.io/
 ### Development
 
 ```
-# Install gems
-gem install sass
-gem install scss_lint
-
 # Install npm packages
 npm install -g gulp
 npm install
