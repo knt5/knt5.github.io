@@ -1,13 +1,16 @@
 const request = require('supertest');
 const cheerio = require('cheerio');
 
+// Settings
+const base = 'http://localhost:8000';
+const ignoreLinks = new Set([
+	'https://www.facebook.com/knt5f',
+]);
+const maxRidirects = 2;
+
+// index
 describe('Smoke testing: index page', () => {
-	const base = 'http://localhost:8000';
 	const path = '/';
-	const ignoreLinks = new Set([
-		'https://www.facebook.com/knt5f',
-	]);
-	const maxRidirects = 2;
 
 	it('Every link response is 200', (done) => {
 		const links = [];
