@@ -14,7 +14,8 @@ describe('Smoke testing: index page', () => {
 
 	it('Every link response is 200', (done) => {
 		const links = [];
-		let count = 0;
+		let requestCount = 0;
+		let doneCount = 0;
 
 		request(base)
 			.get(path)
@@ -39,6 +40,7 @@ describe('Smoke testing: index page', () => {
 			const link = links[i];
 			let url;
 
+			// Generate url
 			if (link.match(/^http[s]?:\/\//)) {
 				url = link;
 			} else if (link.startsWith('/')) {
@@ -49,6 +51,7 @@ describe('Smoke testing: index page', () => {
 
 			console.log(`      ${url}`);
 
+			// Request
 			request(url)
 				.head('')
 				.redirects(maxRidirects)
@@ -57,14 +60,18 @@ describe('Smoke testing: index page', () => {
 					if (error) {
 						done(error);
 					} else {
-						count++;
-						if (count < links.length) {
-							testLink(i + 1);
-						} else {
+						doneCount++;
+						if (doneCount >= links.length) {
 							done();
 						}
 					}
 				});
+			
+			// Next request
+			requestCount++;
+			if (requestCount < links.length) {
+				testLink(i + 1);
+			}
 		}
 	});
 });
