@@ -3,8 +3,9 @@
   "name": "knt5.github.io",
   "author": "knt5",
   "scripts": {
-    "lint:css": "$(npm bin)/stylelint 'src/css/**/*.scss' --syntax scss",
+    "lint": "npm run lint:js; npm run lint:css",
     "lint:js": "$(npm bin)/eslint 'src/js/**/*.js'",
+    "lint:css": "$(npm bin)/stylelint 'src/css/**/*.scss' --syntax scss",
     "test:e2e": "wdio test/e2e/config/wdio.conf.js",
     "test:smoke": "$(npm bin)/mocha --color --reporter spec --timeout 120000 'test/smoke/**/*.smoke.js'",
     "selenium": "java -jar test/e2e/bin/selenium-server-standalone.jar"
