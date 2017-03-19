@@ -35,7 +35,7 @@ brew install chromedriver geckodriver
 
 ```
 # Run selenium-server-standalone
-npm run selenium
+npm run server:selenium
 
 # Run E2E test
 npm run test:e2e
