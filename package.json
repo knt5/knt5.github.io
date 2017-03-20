@@ -4,8 +4,8 @@
   "author": "knt5",
   "scripts": {
     "lint": "npm run lint:js; npm run lint:css",
-    "lint:js": "eslint 'src/js/**/*.js'",
-    "lint:css": "stylelint 'src/css/**/*.scss' --syntax scss",
+    "lint:js": "eslint 'src/js/**/*.js'; echo",
+    "lint:css": "stylelint 'src/css/**/*.scss' --syntax scss; echo",
     "test:e2e": "wdio test/e2e/config/wdio.conf.js",
     "test:smoke": "mocha --color --reporter spec --timeout 120000 'test/smoke/**/*.smoke.js'",
     "server:selenium": "java -jar test/e2e/bin/selenium-server-standalone.jar"
