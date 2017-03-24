@@ -1,7 +1,9 @@
 @import './reset';
 @import './variables';
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 
@@ -12,16 +14,28 @@ body {
 	-webkit-text-size-adjust: 100%;  // for iOS Safari
 }
 
-body, input, select, textarea, th, td {
-	font-family: "Myriad Pro", "Lucida Grande", "GillSans",
-		"Hiragino Kaku Gothic Pro", "Meiryo", "sans-serif";
+body,
+input,
+select,
+textarea,
+th,
+td {
+	font-family:
+		"Myriad Pro",
+		"Lucida Grande",
+		"GillSans",
+		"Hiragino Kaku Gothic Pro",
+		"Meiryo",
+		"sans-serif";
 }
 
 a {
 	color: #07d;
 }
 
-a:link, a:visited, a:active {
+a:link,
+a:visited,
+a:active {
 	text-decoration: none;
 }
 
