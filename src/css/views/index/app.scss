@@ -1,11 +1,14 @@
+// Base
 @import 'base/base';
 @import 'components/footer';
 
+// View
 @import './header';
 @import './section';
 @import './profile';
 @import './product';
 
-h2, h3 {
+h2,
+h3 {
 	font-family: 'AvenirNext-Regular';  // for iOS
 }

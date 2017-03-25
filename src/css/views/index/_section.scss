@@ -38,7 +38,8 @@
 //============================== media:$content-width ==============================
 
 @media (max-width: $content-width) {
-	.profile, .product {
+	.profile,
+	.product {
 		width: auto;
 		
 		h2 {

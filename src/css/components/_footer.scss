@@ -4,7 +4,7 @@
 	margin-top: 80px;
 	padding: 20px 20px 60px;
 	width: 100%;
-	background: linear-gradient(to left, #4b6cb7 , #182848);
+	background: linear-gradient(to left, #4b6cb7, #182848);
 	color: #fff;
 }
 
@@ -16,7 +16,9 @@
 		color: #fff;
 	}
 	
-	a:link, a:visited, a:active {
+	a:link,
+	a:visited,
+	a:active {
 		text-decoration: underline;
 	}
 
