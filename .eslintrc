@@ -1,6 +1,10 @@
 {
   "extends": "eslint-config-knt5-base",
   "env": {
-    "jquery": true
+    "jquery": true,
+    "mocha": true
+  },
+  "globals": {
+    "browser": true
   }
 }
