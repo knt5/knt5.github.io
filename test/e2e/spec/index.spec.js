@@ -1,4 +1,3 @@
-// const expect = require('chai').expect;
 const IndexPage = require('../page/IndexPage');
 
 describe('index page', () => {

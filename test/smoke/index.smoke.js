@@ -66,7 +66,7 @@ describe('Smoke testing: index page', () => {
 						}
 					}
 				});
-			
+
 			// Next request
 			requestCount++;
 			if (requestCount < links.length) {
