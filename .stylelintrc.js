@@ -8,5 +8,5 @@ module.exports = {
 		'rule-empty-line-before': ['always', {
 			ignore: ['after-comment', 'inside-block'],
 		}],
-	}
+	},
 };
