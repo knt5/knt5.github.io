@@ -4,8 +4,6 @@ https://knt5.github.io/
 
 ## Installation
 
-### Development
-
 ```
 # Install npm packages
 npm install -g gulp
@@ -16,11 +14,9 @@ gulp build
 
 # Watch
 gulp
-```
 
-### For E2E test
+## For E2E test ##
 
-```
 # Install selenium-server-standalone (^3.0.1)
 wget -O test/e2e/bin/selenium-server-standalone.jar \
   http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar
