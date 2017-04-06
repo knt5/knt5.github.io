@@ -6,7 +6,7 @@ $(() => {
 		overlap: 5,
 	});
 
-	$('#js-profile-lang-chart-label-c').sparkle({
+	$('#js-profileLangChartLabel-C').sparkle({
 		color: ['#ff9', '#fff'],
 		direction: 'up',
 		speed: 1,
@@ -15,7 +15,7 @@ $(() => {
 		overlap: 30,
 	});
 
-	$('#js-profile-lang-chart-label-js').sparkle({
+	$('#js-profileLangChartLabel-Javascript').sparkle({
 		color: ['#ff9', '#fff'],
 		speed: 1,
 		count: 180,
