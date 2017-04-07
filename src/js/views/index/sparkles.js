@@ -1,5 +1,5 @@
 $(() => {
-	$('#js-header-image').sparkle({
+	$('#js-headerImage').sparkle({
 		direction: 'down',
 		speed: 0.4,
 		fadeSpeed: 3000,
