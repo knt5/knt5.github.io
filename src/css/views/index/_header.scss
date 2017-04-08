@@ -8,7 +8,7 @@
 	font-family: 'GillSans';  // for iOS
 }
 
-.header-box {
+.header_box {
 	margin: 0 auto;
 	padding: 60px 0 80px;
 	width: $content-width;
@@ -24,13 +24,13 @@
 	}
 }
 
-.header-image-box {
+.header_imageBox {
 	position: relative;
 	margin: 0 auto 150px;
 	width: $header-image-size;
 }
 
-.header-image {
+.header_image {
 	position: absolute;
 	top: -70px;
 	width: $header-image-size;
@@ -43,7 +43,7 @@
 	box-shadow: 0 2px 6px 1px #999;
 }
 
-.header-image-desc {
+.header_imageDesc {
 	font-size: 12px;
 	color: #999;
 	line-height: 1.1;
@@ -59,7 +59,7 @@
 //============================== media:$content-width ==============================
 
 @media (max-width: $content-width) {
-	.header-box {
+	.header_box {
 		width: auto;
 		padding: 40px 0;
 		text-align: center;
@@ -69,11 +69,11 @@
 		}
 	}
 	
-	.header-image-box {
+	.header_imageBox {
 		width: $small-header-image-size;
 	}
 	
-	.header-image {
+	.header_image {
 		top: -20px;
 		width: $small-header-image-size;
 		height: $small-header-image-size;
@@ -85,7 +85,7 @@
 //============================== media:500 ==============================
 
 @media (max-width: 500px) {
-	.header-github-ribbon {
+	.header_githubRibbon {
 		img {
 			width: 74px;
 			height: 74px;
