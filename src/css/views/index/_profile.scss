@@ -23,18 +23,18 @@
 
 //============================== profile:lang ==============================
 
-.profile-lang-chart-box {
+.profile_langChartBox {
 	position: relative;
 	margin: 30px auto 0;
 	width: 100%;
 	max-width: 607px;
 }
 
-.profile-lang-chart {
+.profile_LangChart {
 	width: 100%;
 }
 
-.profile-lang-chart-label-c {
+.profile_langChartLabel-c {
 	position: absolute;
 	top: 10%;
 	right: 0;
@@ -61,7 +61,7 @@
 		0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
-.profile-lang-chart-label-js {
+.profile_langChartLabel-js {
 	position: absolute;
 	bottom: 15%;
 	left: 0;
@@ -88,6 +88,17 @@
 		0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
+@media (max-width: 500px) {
+	.profile_langChartLabel-c {
+		top: 2%;
+		font-size: 140px;
+	}
+	
+	.profile_langChartLabel-js {
+		font-size: 40px;
+	}
+}
+
 //============================== profile:swimming ==============================
 
 .swimming-box {
@@ -98,17 +109,4 @@
 .swimming {
 	display: inline-block;
 	text-align: left;
-}
-
-//============================== media:500 ==============================
-
-@media (max-width: 500px) {
-	.profile-lang-chart-label-c {
-		top: 2%;
-		font-size: 140px;
-	}
-	
-	.profile-lang-chart-label-js {
-		font-size: 40px;
-	}
 }
