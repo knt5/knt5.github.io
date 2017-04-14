@@ -8,7 +8,7 @@
 	color: #fff;
 }
 
-.footer-box {
+.footer_box {
 	margin: 0 auto;
 	width: $content-width;
 	
@@ -29,7 +29,7 @@
 
 //============================== copyright ==============================
 
-.footer-copyright {
+.footer_copyright {
 	margin-top: 40px;
 	font-size: 12px;
 	text-align: center;
@@ -38,11 +38,11 @@
 
 //============================== links ==============================
 
-.footer-link-list-box {
+.footer_linkListBox {
 	margin-top: 20px;
 }
 
-.footer-link-list {
+.footer_linkList {
 	display: inline-block;
 	vertical-align: top;
 	margin-top: 20px;
@@ -56,29 +56,29 @@
 	}
 }
 
-.footer-link-list:nth-last-child(1) {
+.footer_linkList:nth-last-child(1) {
 	margin-right: 0;
 }
 
-.footer-link-image {
+.footer_linkImage {
 	display: block;
 	float: left;
 }
 
-.footer-link-text {
+.footer_linkText {
 	display: block;
 	float: left;
 	margin: 0 0 4px 6px;
 	line-height: 16px;
 }
 
-.footer-emoji--lock {
+.footer_emoji-lock {
 	font-size: 13px;
 }
 
 //============================== icon ==============================
 
-.footer-icon {
+.footer_icon {
 	width: 16px;
 	height: 16px;
 }
@@ -86,7 +86,7 @@
 //============================== media:$content-width ==============================
 
 @media (max-width: $content-width) {
-	.footer-box {
+	.footer_box {
 		width: auto;
 	}
 }
