@@ -20,6 +20,42 @@
 	border: 1px solid #999;
 }
 
+//============================== product:hakoniwa ==============================
+
+.product_hakoniwa {
+	background: #000;
+	background-image: linear-gradient(to left, #434343, #000);
+	color: #fff;
+	width: auto;
+	padding: 60px 20px;
+	
+	h3 {
+		margin-top: 0;
+		font-size: 40px;
+	}
+}
+
+.product_hakoniwaScreenshotBox {
+	margin: 0 -20px 20px;
+}
+
+.product_hakoniwaScreenshot {
+	width: 100%;
+	max-width: 860px;
+}
+
+//============================== product:city-generator ==============================
+
+//.product_cityGeneratorSummaryImage {
+//	width: 100%;
+//	max-width: 560px;
+//}
+
+.product_cityGeneratorImage {
+	width: 100%;
+	max-width: 560px;
+}
+
 //============================== product:jpgis-convert ==============================
 .product_jpgisGmlConverterImage {
 	width: 100%;
@@ -48,42 +84,6 @@
 .product_theFurImage {
 	width: 100%;
 	max-width: 560px;
-}
-
-//============================== product:city-generator ==============================
-
-//.product_cityGeneratorSummaryImage {
-//	width: 100%;
-//	max-width: 560px;
-//}
-
-.product_cityGeneratorImage {
-	width: 100%;
-	max-width: 560px;
-}
-
-//============================== product:hakoniwa ==============================
-
-.product-hakoniwa {
-	background: #000;
-	background-image: linear-gradient(to left, #434343, #000);
-	color: #fff;
-	width: auto;
-	padding: 60px 20px;
-	
-	h3 {
-		margin-top: 0;
-		font-size: 40px;
-	}
-}
-
-.product-hakoniwa-screen-shot-box {
-	margin: 0 -20px 20px;
-}
-
-.product-hakoniwa-screen-shot {
-	width: 100%;
-	max-width: 860px;
 }
 
 //============================== product:cubox ==============================
