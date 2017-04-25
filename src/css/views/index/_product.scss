@@ -101,20 +101,12 @@
 
 //============================== product:console-artist ==============================
 
-.product-console-artist-screen-shot-box {
+.product_consoleArtistScreenshotBox {
 	width: 802px;
 	margin: 0 auto;
 }
 
-.product-console-artist-screen-shot-vertical {
-	display: block;
-	float: left;
-	margin: 8px 8px 0 0;
-	width: 100%;
-	max-width: 248px;
-}
-
-.product-console-artist-screen-shot {
+.product_consoleArtistScreenshot {
 	display: block;
 	float: left;
 	margin-top: 8px;
@@ -122,22 +114,30 @@
 	max-width: 546px;
 }
 
-//============================== media:842 (console-art ss) ==============================
+.product_consoleArtistScreenshot-vertical {
+	display: block;
+	float: left;
+	margin: 8px 8px 0 0;
+	width: 100%;
+	max-width: 248px;
+}
+
+//---------- media:842 / console-artist screenshots ----------
 
 @media (max-width: 842px) {
-	.product-console-artist-screen-shot-box {
+	.product_consoleArtistScreenshotBox {
 		width: auto;
 		text-align: center;
 	}
 	
-	.product-console-artist-screen-shot-vertical {
+	.product_consoleArtistScreenshot {
+		display: inline;
+		float: none;
+	}
+	
+	.product_consoleArtistScreenshot-vertical {
 		//display: inline;
 		//float: none;
 		display: none;
-	}
-	
-	.product-console-artist-screen-shot {
-		display: inline;
-		float: none;
 	}
 }
