@@ -1,6 +1,10 @@
 //============================== section ==============================
 
 .section {
+	margin: 60px auto 0;
+	padding: 0 20px;
+	width: $content-width;
+	
 	h2 {
 		text-align: center;
 		font-size: 55px;
@@ -32,9 +36,6 @@
 
 .section-profile {
 	@extend .section;
-	margin: 60px auto 0;
-	padding: 0 20px;
-	width: $content-width;
 	
 	h2 {
 		letter-spacing: 2px;
@@ -59,9 +60,6 @@
 
 .section-product {
 	@extend .section;
-	margin: 60px auto 0;
-	padding: 0 20px;
-	width: $content-width;
 	
 	h3 {
 		margin-top: 45px;
