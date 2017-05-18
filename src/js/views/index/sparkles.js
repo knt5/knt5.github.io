@@ -2,6 +2,7 @@ $(() => {
 	$('#js-headerImage').sparkle({
 		direction: 'down',
 		speed: 0.4,
+		count: 80,
 		fadeSpeed: 3000,
 		overlap: 5,
 	});
@@ -10,7 +11,7 @@ $(() => {
 		color: ['#ff9', '#fff'],
 		direction: 'up',
 		speed: 4,
-		count: 260,
+		count: 360,
 		fadeSpeed: 3000,
 		overlap: 30,
 	});
