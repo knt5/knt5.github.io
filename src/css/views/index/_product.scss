@@ -31,11 +31,6 @@
 
 //============================== product:city-generator ==============================
 
-//.product_cityGeneratorSummaryImage {
-//	width: 100%;
-//	max-width: 560px;
-//}
-
 .product_cityGeneratorImage {
 	width: 100%;
 	max-width: 560px;
@@ -60,11 +55,6 @@
 }
 
 //============================== product:the-fur ==============================
-
-//.product_theFurExamples {
-//	width: 100%;
-//	max-width: 800px;
-//}
 
 .product_theFurImage {
 	width: 100%;
@@ -107,7 +97,7 @@
 	max-width: 248px;
 }
 
-//---------- media:842 / console-artist screenshots ----------
+//-- media:842 / console-artist screenshots --
 
 @media (max-width: 842px) {
 	.product_consoleArtistScreenshotBox {
@@ -121,8 +111,6 @@
 	}
 	
 	.product_consoleArtistScreenshot-vertical {
-		//display: inline;
-		//float: none;
 		display: none;
 	}
 }
