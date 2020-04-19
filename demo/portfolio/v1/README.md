@@ -1,12 +1,12 @@
-# Portfolio site of knt5
+# Portfolio site of knt5 v1 2016-2020 
 
-https://knt5.github.io/
+https://knt5.github.io/demo/portfolio/v1/
 
 ## Installation
 
 ```
 # Install npm packages
-npm install -g gulp
+npm install -g 'gulp@3.9.0'
 npm install
 
 # Build
