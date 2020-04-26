@@ -1,5 +1,6 @@
 <template lang="pug">
-	.not-found Not found
+	.not-found
+		.content * Page not found *
 </template>
 
 <script lang="ts">
@@ -14,8 +15,15 @@ export default class NotFound extends Vue {}
 </script>
 
 <style lang="scss" scoped>
+@import '~@/styles/layout';
+
 .not-found {
-	padding: 48px;
-	font-size: 48px;
+	padding: 120px 0 60px;
+	font-size: 32px;
+}
+
+.content {
+	@extend %content;
+	text-align: center;
 }
 </style>
