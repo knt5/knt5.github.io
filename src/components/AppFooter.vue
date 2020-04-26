@@ -3,8 +3,8 @@
 		.content
 			.link-box
 				a.link.github(href="https://github.com/knt5") GitHub
-				a.link.facebook(href="https://www.facebook.com/knt5f") Facebook
 				a.link.twitter(href="https://twitter.com/knt5") Twitter🔒
+				a.link.facebook(href="https://www.facebook.com/knt5f") Facebook
 			.copyright Copyright © Kenta Motomura. All rights reserved.
 </template>
 
