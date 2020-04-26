@@ -13,7 +13,7 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class Home extends Vue {}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .home {
 	font-size: 300px;
 }

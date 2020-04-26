@@ -16,7 +16,7 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class AppFooter extends Vue {}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '~@/styles/layout';
 
 @mixin icon($name) {
