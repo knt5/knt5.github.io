@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
+import RouteName from '@/models/router/RouteName';
 import Home from '@/views/Home.vue';
 import NotFound from '@/views/NotFound.vue';
 
@@ -8,14 +9,14 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [
 	{
 		path: `/`,
-		name: `Home`,
+		name: RouteName.Home,
 		component: Home,
 		caseSensitive: true,
 		pathToRegexpOptions: { strict: true },
 	},
 	{
 		path: `*`,
-		name: `notFound`,
+		name: RouteName.NotFound,
 		component: NotFound,
 	},
 ];
