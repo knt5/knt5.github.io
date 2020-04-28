@@ -47,7 +47,7 @@ export default class AppHeader extends Vue {
 
 .content {
 	@extend %content;
-	padding: 60px 0 69px;
+	padding: 60px 0 66px;
 }
 
 .title {

@@ -1,20 +1,18 @@
 <template lang="pug">
-	.home home
+	.home
+		profile-section
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import ProfileSection from '@/components/ProfileSection.vue';
 
 /** Home */
 @Component({
-	components: {},
+	components: {
+		ProfileSection,
+	},
 	meta: () => ({ title: `Kenta Motomura` }),
 })
 export default class Home extends Vue {}
 </script>
-
-<style lang="scss" scoped>
-.home {
-	font-size: 300px;
-}
-</style>
