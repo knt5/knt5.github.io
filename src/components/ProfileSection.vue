@@ -51,6 +51,7 @@ export default class ProfileSection extends Vue {}
 	margin: 0 20px 20px 0;
 	padding: 22px 17px;
 	border: 1px solid #fff;
+	border-radius: 2px;
 }
 
 .link-card {

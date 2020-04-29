@@ -56,6 +56,8 @@ export default class AppFooter extends Vue {}
 
 	&:hover {
 		color: #fff;
+		text-decoration: none;
+		opacity: 0.6;
 	}
 
 	&:last-child {

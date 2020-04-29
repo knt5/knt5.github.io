@@ -7,7 +7,7 @@
 		.medal-box
 			.medal
 				profile-medal
-			.medal-description Photo: Matterhorn, Swiss🇨🇭 © 2011 Kenta Motomura
+			.medal-description Photo: Matterhorn🇨🇭 © 2011 Kenta Motomura
 </template>
 
 <script lang="ts">
