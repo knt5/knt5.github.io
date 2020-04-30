@@ -1,29 +1,39 @@
 <template lang="pug">
-	.profile-section
-		.section-title.title Profile
-		.profile-box
-			.card
-				.item-title Name
-				.item Kenta Motomura
-			.card
-				.item-title Location
-				.item Tokyo🗼, Japan🇯🇵
-			a(href="https://github.com/knt5" target="_blank").link-card
-				.item-title GitHub 🚀
-				.item https://github.com/knt5
-			.card
-				.item-title Job
-				.item Software engineer
-			.card
-				.item-title Interests
-				.item c, typescript, javascript, react, vuejs, photos, graphics, design, 3d, gpu, maps, test, performance, usability, maintainability, user interface, deep learning(e.g. cnn), mac, iphone, ios, git, japan, swimming, cooking, onsen
+	div
+		.profile-section
+			.section-title.title Profile
+			.card-box
+				.card
+					.item-title Name
+					.item Kenta Motomura
+				.card
+					.item-title Location
+					.item Tokyo🗼, Japan🇯🇵
+				a(href="https://github.com/knt5" target="_blank").link-card
+					.item-title GitHub 🚀
+					.item https://github.com/knt5
+				.card
+					.item-title Job
+					.item Software engineer
+				.card
+					.item-title Interests
+					.item c, typescript, javascript, react, vuejs, photos, graphics, design, 3d, gpu, maps, test, performance, usability, maintainability, user interface, deep learning(e.g. cnn), mac, iphone, ios, git, japan, swimming, cooking, onsen
+		profile-section-programming
+		profile-section-swimming
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import ProfileSectionProgramming from '@/components/ProfileSectionProgramming.vue';
+import ProfileSectionSwimming from '@/components/ProfileSectionSwimming.vue';
 
 /** Profile section */
-@Component({})
+@Component({
+	components: {
+		ProfileSectionProgramming,
+		ProfileSectionSwimming,
+	},
+})
 export default class ProfileSection extends Vue {}
 </script>
 
@@ -42,7 +52,7 @@ export default class ProfileSection extends Vue {}
 	letter-spacing: 1.5px;
 }
 
-.profile-box {
+.card-box {
 	text-align: center;
 }
 
