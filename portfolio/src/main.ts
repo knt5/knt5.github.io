@@ -6,8 +6,10 @@ import store from '@/store';
 // Plugins
 import VueMeta from 'vue-meta';
 import BrowserPlugin from '@/plugins/BrowserPlugin';
+import UrlPlugin from '@/plugins/UrlPlugin';
 Vue.use(VueMeta, { keyName: `meta` });
 Vue.use(BrowserPlugin);
+Vue.use(UrlPlugin);
 
 // Filters
 import digit from '@/filters/digit';

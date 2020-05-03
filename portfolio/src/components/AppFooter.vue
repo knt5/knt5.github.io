@@ -2,9 +2,9 @@
 	.app-footer
 		.content
 			.link-box
-				a.link.github(href="https://github.com/knt5") GitHub
-				a.link.twitter(href="https://twitter.com/knt5") Twitter🔒
-				a.link.facebook(href="https://www.facebook.com/knt5f") Facebook
+				a.link.github(:href="$url.github" target="_blank") GitHub
+				a.link.twitter(href="https://twitter.com/knt5" target="_blank") Twitter🔒
+				a.link.facebook(href="https://www.facebook.com/knt5f" target="_blank") Facebook
 			.copyright Copyright © Kenta Motomura. All rights reserved.
 </template>
 

@@ -9,15 +9,15 @@
 				.card
 					.item-title Location
 					.item Tokyo🗼, Japan🇯🇵
-				a(href="https://github.com/knt5" target="_blank").link-card
+				a(:href="$url.github" target="_blank").link-card
 					.item-title GitHub 🚀
-					.item https://github.com/knt5
+					.item {{ $url.github }}
 				.card
 					.item-title Job
 					.item Software engineer
 				.card
 					.item-title Interests
-					.item C, TypeScript, JavaScript, React, Vue.js, Photos, Graphics, Design, 3D, GPU, Maps, Test, Performance, Usability, Maintainability, User interface, Deep learning(e.g. CNN), Mac, iPhone, iOS, Git, Japan, Swimming, Cooking, Onsen
+					.item C, TypeScript, JavaScript, React, Vue.js, Photos, Graphics, Design, 3D, GPU, Maps, Test, Performance, Usability, Maintainability, User interface, Deep Learning(e.g. CNN), Mac, iPhone, iOS, Git, Japan, Swimming, Cooking, Onsen
 		profile-section-programming
 		profile-section-swimming
 </template>
