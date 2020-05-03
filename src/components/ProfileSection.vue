@@ -17,7 +17,7 @@
 					.item Software engineer
 				.card
 					.item-title Interests
-					.item c, typescript, javascript, react, vuejs, photos, graphics, design, 3d, gpu, maps, test, performance, usability, maintainability, user interface, deep learning(e.g. cnn), mac, iphone, ios, git, japan, swimming, cooking, onsen
+					.item C, TypeScript, JavaScript, React, Vue.js, Photos, Graphics, Design, 3D, GPU, Maps, Test, Performance, Usability, Maintainability, User interface, Deep learning(e.g. CNN), Mac, iPhone, iOS, Git, Japan, Swimming, Cooking, Onsen
 		profile-section-programming
 		profile-section-swimming
 </template>
@@ -61,7 +61,7 @@ export default class ProfileSection extends Vue {}
 	margin: 0 20px 20px 0;
 	padding: 22px 17px;
 	border: 1px solid #fff;
-	border-radius: 2px;
+	border-radius: 3px;
 }
 
 .link-card {
