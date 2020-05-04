@@ -1,40 +1,33 @@
+import dayjs from 'dayjs';
 import AppError from '@/errors/AppError';
-import ApiRequest from '@/models/api/ApiRequest';
 import ApiResponse from '@/models/api/ApiResponse';
-import ApiRequestBody from '@/models/api/ApiRequestBody';
+
+const dateTimeFormat = `YYYY/MM/DD HH:mm:ss`;
 
 /** ApiError */
-export default class ApiError<
-	T extends ApiRequest,
-	B extends ApiRequestBody,
-	R extends ApiResponse
-> extends AppError {
+export default class ApiError<R extends ApiResponse> extends AppError {
 	/** Constructor */
 	constructor(
 		errorName: string,
 		status: number,
 		url?: string,
-		response?: R,
-		request?: T,
-		requestBody?: B
+		response?: R | string
 	) {
+		const at = new Date();
+
 		// Build error message
 		const messages = [];
-		url ?? messages.push(`URL: ${url}`);
-		response ?? messages.push(`Response: ${JSON.stringify(response)}`);
-		request ?? messages.push(`Request: ${JSON.stringify(request)}`);
-		requestBody ??
-			messages.push(`Request body: ${JSON.stringify(requestBody)}`);
-		messages.length || messages.unshift(``);
+		messages.push(`status: ${status}`);
+		messages.push(`url: ${url}`);
+		messages.push(`at: ${dayjs(at).format(dateTimeFormat)}`);
+		messages.push(`response: ${JSON.stringify(response)}`);
 
-		super(`${errorName}: ${status}${messages.join(`\n`)}`);
+		super(`${errorName}:\n${messages.join(`\n`)}`);
 
-		this.at = new Date();
+		this.at = at;
 		this.status = status;
 		this.url = url;
 		this.response = response;
-		this.request = request;
-		this.requestBody = requestBody;
 	}
 
 	/** API error occurred time */
@@ -47,11 +40,5 @@ export default class ApiError<
 	readonly url?: string;
 
 	/** API response */
-	readonly response?: R;
-
-	/** API request */
-	readonly request?: T;
-
-	/** API request body */
-	readonly requestBody?: B;
+	readonly response?: R | string;
 }
