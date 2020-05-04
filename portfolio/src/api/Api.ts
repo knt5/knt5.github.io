@@ -42,10 +42,10 @@ abstract class Api {
 		const cancelToken = cancelTokenSource.token;
 
 		return this.api
-			.get<T, R>(url, { params: request, cancelToken })
+			.get(url, { params: request, cancelToken })
 			.then(response => {
 				ApiManager.delete({ apiName: this.apiName, ...options });
-				return response;
+				return response.data;
 			})
 			.catch(error => {
 				ApiManager.delete({ apiName: this.apiName, ...options });
