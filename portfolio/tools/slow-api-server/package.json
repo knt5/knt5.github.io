@@ -1,0 +1,8 @@
+{
+  "name": "slow-api-server",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}
