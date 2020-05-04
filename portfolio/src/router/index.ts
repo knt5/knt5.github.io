@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
+import ApiManager from '@/managers/ApiManager';
 import RouteName from '@/models/router/RouteName';
 import Home from '@/views/Home.vue';
 import NotFound from '@/views/NotFound.vue';
@@ -30,6 +31,12 @@ const router = new VueRouter({
 			return { x: 0, y: 0 };
 		}
 	},
+});
+
+router.beforeEach((to, from, next) => {
+	// Cancel all API connection
+	ApiManager.cancel({});
+	next();
 });
 
 export default router;
