@@ -1,0 +1,32 @@
+{
+	"records": [
+		{
+			"year": 2014,
+			"distance": 31100
+		},
+		{
+			"year": 2015,
+			"distance": 63200
+		},
+		{
+			"year": 2016,
+			"distance": 54000
+		},
+		{
+			"year": 2017,
+			"distance": 43200
+		},
+		{
+			"year": 2018,
+			"distance": 45500
+		},
+		{
+			"year": 2019,
+			"distance": 49825
+		},
+		{
+			"year": 2020,
+			"distance": 8000
+		}
+	]
+}
