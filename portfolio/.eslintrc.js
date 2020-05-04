@@ -44,7 +44,9 @@ module.exports = {
 			files: [`**/*.ts`, `**/*.vue`],
 			rules: {
 				'no-redeclare': `off`, // to give namespace and class name the same name
+				'@typescript-eslint/no-empty-interface': `off`,
 				'@typescript-eslint/no-explicit-any': `error`,
+				'@typescript-eslint/no-namespace': `off`,
 				'@typescript-eslint/explicit-function-return-type': [
 					`error`,
 					{
