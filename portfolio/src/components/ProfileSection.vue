@@ -17,7 +17,13 @@
 					.item Software engineer
 				.card
 					.item-title Interests
-					.item C, TypeScript, JavaScript, React, Vue.js, Photos, Graphics, Design, 3D, GPU, Maps, Test, Performance, Usability, Maintainability, User interface, Deep Learning(e.g. CNN), Mac, iPhone, iOS, Git, Japan, Swimming, Cooking, Onsen
+					.item
+						a.interest(
+							v-for="interest in interests"
+							:key="interest"
+							:href="getInterestLink(interest)"
+							target="_blank"
+						) {{ interest }}
 		profile-section-programming
 		profile-section-swimming
 </template>
@@ -34,12 +40,51 @@ import ProfileSectionSwimming from '@/components/ProfileSectionSwimming.vue';
 		ProfileSectionSwimming,
 	},
 })
-export default class ProfileSection extends Vue {}
+export default class ProfileSection extends Vue {
+	private get interests(): string[] {
+		return [
+			`c`,
+			`typescript`,
+			`javascript`,
+			`react`,
+			`vue.js`,
+			`photos`,
+			`graphics`,
+			`design`,
+			`3d`,
+			`gpu`,
+			`maps`,
+			`test`,
+			`deep learning(e.g. CNN)`,
+			`DeepL`,
+			`performance`,
+			`usability`,
+			`maintainability`,
+			`user interface`,
+			`team building`,
+			`mac`,
+			`iphone`,
+			`ios`,
+			`git`,
+			`japan`,
+			`kyoto⛩`,
+			`tokyo🗼`,
+			`swimming 🏊‍♂️`,
+			`cooking 🍳`,
+			`onsen`,
+		];
+	}
+
+	private getInterestLink(interest: string): string {
+		return `https://www.google.com/search?q=${interest}`;
+	}
+}
 </script>
 
 <style lang="scss" scoped>
 @import '~@/styles/layout';
 @import '~@/styles/section';
+@import '~@/styles/title';
 
 .profile-section {
 	@extend %content;
@@ -64,6 +109,20 @@ export default class ProfileSection extends Vue {}
 	border-radius: 3px;
 }
 
+.interest {
+	display: inline-block;
+	padding: 2px 7px 0 7px;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	transition: border 0.1s ease-out;
+
+	&:hover {
+		text-decoration: none;
+		border: 1px solid $link-text-hover-color;
+		transition: none;
+	}
+}
+
 .link-card {
 	@extend .card;
 
@@ -75,11 +134,7 @@ export default class ProfileSection extends Vue {}
 }
 
 .item-title {
-	color: $strong-text-color;
-	font-weight: bold;
-	font-size: 14px;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
+	@extend %small-title;
 }
 
 @media (max-width: $content-width) {
