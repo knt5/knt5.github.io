@@ -3,6 +3,7 @@
 		.header
 			.content
 				h1.title Kenta Motomura
+					a.github(:href="$url.github" target="_blank")
 				.view-title {{ viewTitle }}
 		.medal-box
 			.medal
@@ -39,6 +40,9 @@ export default class AppHeader extends Vue {
 <style lang="scss" scoped>
 @import '~@/styles/layout';
 
+$github-icon-size: 50px;
+$github-icon-small-size: 32px;
+
 .header {
 	color: #fff;
 	font-family: 'GillSans'; // for iOS
@@ -51,9 +55,23 @@ export default class AppHeader extends Vue {
 }
 
 .title {
+	display: inline-block;
 	font-weight: normal;
 	font-size: 60px;
 	line-height: 1.1;
+}
+
+.github {
+	display: inline-block;
+	width: $github-icon-size;
+	height: $github-icon-size;
+	margin: 0 0 -4px 30px;
+	background: url(~@/assets/icons/github-large.png) no-repeat;
+	background-size: $github-icon-size $github-icon-size;
+
+	&:hover {
+		opacity: 0.6;
+	}
 }
 
 .view-title {
@@ -94,6 +112,13 @@ export default class AppHeader extends Vue {
 	.medal-box {
 		margin-top: -20px;
 		text-align: center;
+	}
+
+	.github {
+		width: $github-icon-small-size;
+		height: $github-icon-small-size;
+		margin: 0 0 -2px 12px;
+		background-size: $github-icon-small-size $github-icon-small-size;
 	}
 }
 </style>
