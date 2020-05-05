@@ -4,7 +4,7 @@
 		.sub-section-title Programming language
 		.sub-section-content
 			.box
-				.title I like
+				.title 🎉 I like ✨
 				div JavaScript, TypeScript, C
 			.box
 				.title Work experience
@@ -12,7 +12,7 @@
 					.weak , PHP, Objective-C, ActionScript(old!)
 					span , etc
 			.box
-				.title Private
+				.title 🍀 Private
 				div Work experience + GLSL, Go
 					.weak , AppleScript, R, C++
 					span , etc

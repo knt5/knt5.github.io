@@ -1,7 +1,7 @@
 <template lang="pug">
 	//- TODO: Swimming chart
 	.swimming
-		.sub-section-title Swimming
+		.sub-section-title Swimming 🏊‍♂️
 		.sub-section-content
 			.record-column(v-for="(columnRecords, index) in records" :key="index")
 				.record-row(v-for="record in columnRecords" :key="record.year")
