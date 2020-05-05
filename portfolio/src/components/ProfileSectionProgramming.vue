@@ -33,7 +33,6 @@ export default class ProfileSectionProgramming extends Vue {}
 
 .programming {
 	@extend %content;
-	margin-top: 30px;
 }
 
 .sub-section-content {

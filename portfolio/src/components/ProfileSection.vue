@@ -142,5 +142,9 @@ export default class ProfileSection extends Vue {
 		margin: 0;
 		padding: 10px 14px;
 	}
+
+	.card-box {
+		padding-bottom: 32px;
+	}
 }
 </style>
