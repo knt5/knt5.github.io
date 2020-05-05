@@ -1,5 +1,5 @@
 <template lang="pug">
-	//- TODO: Make a swimming records chart
+	//- TODO: Swimming chart
 	.swimming
 		.sub-section-title.title Swimming
 		.sub-section-content
@@ -21,6 +21,7 @@ export default class ProfileSectionSwimming extends Vue {
 	private readonly swimmingRepository = ApiRepositoryFactory.get<
 		SwimmingRepository
 	>(ApiRepository.Name.Swimming);
+
 
 	private response: GetSwimmingApiResponse | null = null;
 
