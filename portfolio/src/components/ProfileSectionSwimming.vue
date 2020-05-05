@@ -1,7 +1,7 @@
 <template lang="pug">
 	//- TODO: Swimming chart
 	.swimming
-		.sub-section-title.title Swimming
+		.sub-section-title Swimming
 		.sub-section-content
 			.record-column(v-for="(columnRecords, index) in records" :key="index")
 				.record-row(v-for="record in columnRecords" :key="record.year")
@@ -31,7 +31,7 @@ export default class ProfileSectionSwimming extends Vue {
 	private response: GetSwimmingApiResponse | null = null;
 
 	private get records(): GetSwimmingApiResponse.Record[][] {
-		const records = [];
+		const records: GetSwimmingApiResponse.Record[][] = [];
 
 		if (this.response) {
 			let columnIndex = -1;
@@ -63,9 +63,6 @@ export default class ProfileSectionSwimming extends Vue {
 
 .swimming {
 	@extend %content;
-}
-
-.title {
 	margin-top: 37px;
 }
 
