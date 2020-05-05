@@ -51,14 +51,8 @@ export default class ProfileSectionProgramming extends Vue {}
 	@extend %small-title;
 }
 
-.strong {
-	display: inline-block;
-	color: $strong-text-color;
-	font-weight: bold;
-}
-
 .weak {
-	display: inline-block;
+	display: inline;
 	color: #ccc;
 }
 </style>

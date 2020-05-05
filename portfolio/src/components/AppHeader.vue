@@ -68,6 +68,7 @@ $github-icon-small-size: 32px;
 	margin: 0 0 -4px 30px;
 	background: url(~@/assets/icons/github-large.png) no-repeat;
 	background-size: $github-icon-size $github-icon-size;
+	border-radius: 50%;
 
 	&:hover {
 		opacity: 0.6;
