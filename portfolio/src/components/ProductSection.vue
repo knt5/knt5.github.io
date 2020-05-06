@@ -177,27 +177,27 @@
 					.card
 						.small-title Version.2
 						.box
+								product-section-link(href="https://github.com/knt5/knt5.github.io") GitHub
+						.box
 							div TypeScript
 							div Vue.js + vue cli
 							div 2020/05/06
-						.box
-								product-section-link(href="https://github.com/knt5/knt5.github.io") GitHub
 					.card
 						.small-title Version.1
+						.box
+							product-section-link(:href="$url.demo.portfolio.v1") Demo
 						.box
 							div JavaScript
 							div Original builder on gulp
 							div 2016/11/10
-						.box
-							product-section-link(:href="$url.demo.portfolio.v1") Demo
 					.card
 						.small-title Version.0
+						.box
+							product-section-link(href="http://knt5lab.appspot.com/") Site
 						.box
 							div Go
 							div Google App Engine
 							div 2012/07/28
-						.box
-							product-section-link(href="http://knt5lab.appspot.com/") Site
 </template>
 
 <script lang="ts">
