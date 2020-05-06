@@ -12,7 +12,7 @@ class SwimmingRepository extends ApiRepository {
 	/** Get swimming */
 	async get(request: GetSwimmingApiRequest): Promise<GetSwimmingApiResponse> {
 		return this.portfolioApi.get(
-			`/api/swimming.json`,
+			`/build/api/swimming.json`,
 			request,
 			this.$getRequestOptions(SwimmingRepository.RequestName.Get)
 		);
