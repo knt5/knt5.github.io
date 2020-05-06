@@ -7,7 +7,7 @@
 				.title 🎉 I like ✨
 				div JavaScript, TypeScript, C
 			.box
-				.title Work experience
+				.title ⚡️ Work experience
 				div TypeScript, JavaScript, SCSS, Pug, CSS, HTML, Java, C, C#, Python, Swift, Shell script, Perl
 					.weak , PHP, Objective-C, ActionScript(old!)
 					span , etc
