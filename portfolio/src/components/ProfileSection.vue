@@ -55,8 +55,8 @@ export default class ProfileSection extends Vue {
 			`gpu`,
 			`maps`,
 			`test`,
-			`deep learning(e.g. CNN)`,
-			`DeepL`,
+			`deep learning(e.g. cnn)`,
+			`deepl`,
 			`performance`,
 			`usability`,
 			`maintainability`,
@@ -111,14 +111,14 @@ export default class ProfileSection extends Vue {
 
 .interest {
 	display: inline-block;
-	padding: 2px 7px 0 7px;
-	border: 1px solid #fff;
-	border-radius: 3px;
+	margin: 0 -4px;
+	padding: 1px 12px;
+	border-radius: 28px;
 	transition: border 0.1s ease-out;
 
 	&:hover {
 		text-decoration: none;
-		border: 1px solid $link-text-hover-color;
+		background: #eef;
 		transition: none;
 	}
 }
