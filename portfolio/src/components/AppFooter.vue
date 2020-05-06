@@ -20,7 +20,7 @@ export default class AppFooter extends Vue {}
 @import '~@/styles/layout';
 
 @mixin icon($name) {
-	background: url(~@/assets/icons/#{$name}.png) no-repeat left 2px;
+	background: url(~@/assets/img/icons/#{$name}.png) no-repeat left 2px;
 	background-size: 18px 18px;
 }
 

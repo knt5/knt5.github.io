@@ -66,7 +66,7 @@ $github-icon-small-size: 32px;
 	width: $github-icon-size;
 	height: $github-icon-size;
 	margin: 0 0 -4px 30px;
-	background: url(~@/assets/icons/github-large.png) no-repeat;
+	background: url(~@/assets/img/icons/github-large.png) no-repeat;
 	background-size: $github-icon-size $github-icon-size;
 	border-radius: 50%;
 

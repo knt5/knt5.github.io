@@ -24,7 +24,7 @@ $small-size: 140px;
 .profile-medal {
 	width: $size;
 	height: $size;
-	background: url(~@/assets/components/profile-medal/knt5.jpg) no-repeat;
+	background: url(~@/assets/img/components/profile-medal/knt5.jpg) no-repeat;
 	background-color: #f9f9f9;
 	background-size: $size $size;
 	border: 5px solid #fff;
