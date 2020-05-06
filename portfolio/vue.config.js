@@ -2,6 +2,7 @@ const StyleLintPlugin = require(`stylelint-webpack-plugin`);
 
 module.exports = {
 	assetsDir: `build`,
+	productionSourceMap: process.env.NODE_ENV !== `production`,
 	configureWebpack: {
 		devServer: {
 			overlay: {
