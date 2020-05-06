@@ -1,17 +1,1 @@
-# Mac OS X
 .DS_Store
-
-# Node.js, npm
-node_modules
-
-# Logs
-npm-debug.log*
-
-#  Working directory
-gulp/tmp/
-
-# Selenium
-test/e2e/bin/*
-!test/e2e/bin/.gitkeep
-test/e2e/result/*
-!test/e2e/result/.gitkeep

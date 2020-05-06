@@ -1,0 +1,18 @@
+@import '~@/styles/variables';
+
+.section-title {
+	color: $strong-text-color;
+	font-size: 55px;
+	text-align: center;
+}
+
+.sub-section-title {
+	color: $strong-text-color;
+	font-size: 30px;
+	text-align: center;
+}
+
+.sub-section-content {
+	margin-top: 10px;
+	text-align: center;
+}

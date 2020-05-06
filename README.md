@@ -1,44 +1,20 @@
-# Portfolio site of knt5
+# Portfolio of knt5
 
 https://knt5.github.io/
 
-## Installation
-
 ```
-# Install npm packages
-npm install -g gulp
-npm install
+# Move to the vue project directory
+cd portfolio
 
-# Build
-gulp build
+# Setup
+npm i
 
-# Watch
-gulp
+# Compiles and hot-reloads for development
+npm run serve
 
-## For E2E test ##
+# Compiles and minifies for production
+npm run build
 
-# Install selenium-server-standalone (^3.0.1)
-wget -O test/e2e/bin/selenium-server-standalone.jar \
-  http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar
-
-# Install ChromeDriver and GeckoDriver
-brew install chromedriver geckodriver
-```
-
-## Testing
-
-### E2E test
-
-```
-# Run selenium-server-standalone
-npm run server:selenium
-
-# Run E2E test
-npm run test:e2e
-```
-
-### Smoke test
-
-```
-npm run test:smoke
+# Lints and fixes files
+npm run lint
 ```

@@ -1,0 +1,33 @@
+@import '~@/styles/layout';
+@import '~@/styles/variables';
+
+.content {
+	@extend %content;
+	margin-top: 10px;
+	padding: 0 $content-padding;
+	text-align: center;
+}
+
+.box {
+	padding-top: 10px;
+}
+
+%product-image {
+	width: 100%;
+	max-width: 560px;
+	margin-top: 10px;
+}
+
+%dark-title {
+	color: #fff;
+}
+
+%card-box {
+	margin-top: 20px;
+	text-align: center;
+}
+
+%card {
+	display: inline-block;
+	padding: 20px 30px 0 30px;
+}

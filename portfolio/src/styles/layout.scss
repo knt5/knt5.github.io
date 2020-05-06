@@ -1,0 +1,12 @@
+@import '~@/styles/variables';
+
+%content {
+	width: $content-width;
+	margin: 0 auto;
+}
+
+@media (max-width: $content-width) {
+	%content {
+		width: auto;
+	}
+}
