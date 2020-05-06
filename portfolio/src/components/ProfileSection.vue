@@ -76,7 +76,7 @@ export default class ProfileSection extends Vue {
 	}
 
 	private getInterestLink(interest: string): string {
-		return `https://www.google.com/search?q=${interest}`;
+		return `https://www.google.com/search?q=${encodeURIComponent(interest)}`;
 	}
 }
 </script>
@@ -88,7 +88,6 @@ export default class ProfileSection extends Vue {
 
 .profile-section {
 	@extend %content;
-	margin-top: 60px;
 	padding: 0 20px;
 	text-align: center;
 }

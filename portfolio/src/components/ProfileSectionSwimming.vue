@@ -7,8 +7,8 @@
 				.record-row(v-for="record in columnRecords" :key="record.year")
 					.record-year {{ record.year }}
 					.record : {{ record.distance | digit }}m ({{ feet(record.distance) | digit }}ft)
-					.attention-mark(v-show="record.year === 2020") *
-		.attention * 2020: 🦠 closed all swimming pools
+					.notice-mark(v-show="record.year === 2020") *
+		.notice * 2020: 🦠 closed all swimming pools
 </template>
 
 <script lang="ts">
@@ -60,6 +60,7 @@ export default class ProfileSectionSwimming extends Vue {
 <style lang="scss" scoped>
 @import '~@/styles/layout';
 @import '~@/styles/section';
+@import '~@/styles/notice';
 
 .swimming {
 	@extend %content;
@@ -68,7 +69,7 @@ export default class ProfileSectionSwimming extends Vue {
 
 .record-column {
 	display: inline-block;
-	padding: 0 25px;
+	padding: 0 $content-padding;
 	vertical-align: top;
 }
 
@@ -86,15 +87,13 @@ export default class ProfileSectionSwimming extends Vue {
 	font-size: 16px;
 }
 
-.attention-mark {
+.notice-mark {
 	display: inline-block;
 	padding-left: 4px;
 }
 
-.attention {
-	margin-top: 15px;
-	color: #999;
-	font-size: 14px;
+.notice {
+	@extend %notice;
 	text-align: center;
 }
 </style>

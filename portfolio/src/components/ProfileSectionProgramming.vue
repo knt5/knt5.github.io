@@ -36,7 +36,7 @@ export default class ProfileSectionProgramming extends Vue {}
 }
 
 .sub-section-content {
-	padding: 0 25px;
+	padding: 0 $content-padding;
 }
 
 .box {
