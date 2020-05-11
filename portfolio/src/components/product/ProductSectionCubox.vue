@@ -25,8 +25,9 @@
 				.card
 					.small-title First release
 					.box
-						product-section-link(href="https://github.com/knt5/cubox/commit/45d2397d25104ab82fec7dd3343f5aa607f36a81")
-							| 2013.04.29 45d2397
+						a(href="https://github.com/knt5/cubox/commit/45d2397d25104ab82fec7dd3343f5aa607f36a81")
+							| 2013.04.29
+						span &nbsp;*
 						.notice * The DevCamp 2013 was held on April 27-28, 2013. This app was born on April 28.
 </template>
 

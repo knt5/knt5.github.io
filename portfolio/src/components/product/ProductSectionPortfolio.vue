@@ -6,7 +6,7 @@
 				.card
 					.small-title Version.2 (now)
 					.box
-							product-section-link(href="https://github.com/knt5/knt5.github.io") GitHub
+							a.link(href="https://github.com/knt5/knt5.github.io") GitHub
 					div
 						div TypeScript
 						div Vue.js + vue cli
@@ -14,8 +14,9 @@
 				.card
 					.small-title Version.1
 					.box
-						product-section-link(:href="$url.demo.portfolio.v1") Demo
-						product-section-link(href="https://github.com/knt5/knt5.github.io/demo/portfolio/v1/") GitHub
+						a.link(:href="$url.demo.portfolio.v1") Demo
+						.space
+						a.link(href="https://github.com/knt5/knt5.github.io/tree/master/demo/portfolio/v1") GitHub
 					div
 						div JavaScript
 						div Original builder on gulp
@@ -23,7 +24,7 @@
 				.card
 					.small-title Version.0
 					.box
-						product-section-link(href="http://knt5lab.appspot.com/") Site
+						a.link(href="http://knt5lab.appspot.com/") Site
 					div
 						div Go
 						div Google App Engine
@@ -33,13 +34,11 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import ProductSectionBox from '@/components/ProductSectionBox.vue';
-import ProductSectionLink from '@/components/ProductSectionLink.vue';
 
 /** ProductSectionConsoleArtist */
 @Component({
 	components: {
 		ProductSectionBox,
-		ProductSectionLink,
 	},
 })
 export default class ProductSectionConsoleArtist extends Vue {}
@@ -62,5 +61,14 @@ export default class ProductSectionConsoleArtist extends Vue {}
 .card {
 	@extend %card;
 	padding-top: 60px;
+}
+
+.link {
+	display: inline-block;
+}
+
+.space {
+	display: inline-block;
+	width: 20px;
 }
 </style>
