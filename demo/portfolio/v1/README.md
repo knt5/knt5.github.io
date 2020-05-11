@@ -5,15 +5,16 @@ https://knt5.github.io/demo/portfolio/v1/
 ## Installation
 
 ```
+# Node.js v9 (!)
+
 # Install npm packages
-npm install -g 'gulp@3.9.0'
 npm install
 
 # Build
-gulp build
+npx gulp build
 
 # Watch
-gulp
+npx gulp
 
 ## For E2E test ##
 
