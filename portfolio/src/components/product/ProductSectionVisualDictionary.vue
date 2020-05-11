@@ -54,7 +54,6 @@ export default class ProductSectionVisualDictionary extends Vue {}
 }
 
 .image {
-	width: 100%;
-	max-width: 720px;
+	@extend %product-image;
 }
 </style>
