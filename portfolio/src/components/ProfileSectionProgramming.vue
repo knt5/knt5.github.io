@@ -8,13 +8,13 @@
 				div JavaScript, TypeScript, C
 			.box
 				.title ⚡️ Work experience
-				div TypeScript, JavaScript, SCSS, Pug, CSS, HTML, Java, C, C#, Python, Swift, Shell script, Perl
-					.weak , PHP, Objective-C, ActionScript(old!)
+				div TypeScript, JavaScript, C, C#, Python, SCSS, Pug, Swift, Java, CSS, HTML, Shell script, Perl
+					.weak , Objective-C, ActionScript(old!), PHP
 					span , etc
 			.box
 				.title 🍀 Private
-				div Work experience + GLSL, Go
-					.weak , AppleScript, R, C++
+				div Work experience + Go, GLSL
+					.weak , R, AppleScript, C++
 					span , etc
 </template>
 

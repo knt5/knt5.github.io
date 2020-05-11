@@ -11,9 +11,6 @@
 		product-section-jpgis-convert
 
 		product-section-separator
-		product-section-visual-dictionary
-
-		product-section-separator
 		product-section-fur
 
 		product-section-separator
@@ -21,6 +18,9 @@
 
 		product-section-separator
 		product-section-console-artist
+
+		product-section-separator
+		product-section-visual-dictionary
 
 		product-section-separator
 		product-section-portfolio

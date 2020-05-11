@@ -10,7 +10,7 @@
 					div
 						div TypeScript
 						div Vue.js + vue cli
-						div 2020/05/07 -
+						div 2020.05.07 -
 				.card
 					.small-title Version.1
 					.box
@@ -18,8 +18,8 @@
 						product-section-link(href="https://github.com/knt5/knt5.github.io/demo/portfolio/v1/") GitHub
 					div
 						div JavaScript
-						div Original build system on gulp
-						div 2016/11/10 - 2020/05/07
+						div Original builder on gulp
+						div 2016.11.10 - 2020.05.07
 				.card
 					.small-title Version.0
 					.box
@@ -27,7 +27,7 @@
 					div
 						div Go
 						div Google App Engine
-						div 2012/07/28 - 2016/11/10
+						div 2012.07.28 - 2016.11.10
 </template>
 
 <script lang="ts">

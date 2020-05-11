@@ -14,7 +14,7 @@
 					.small-title First release
 					.box
 						product-section-link(href="https://github.com/knt5/visual-dictionary-mac/commit/ad204094d22368b80665c4d7549d4a3686d0b49f")
-							| 2016/09/06 ad20409
+							| 2016.09.06 ad20409
 </template>
 
 <script lang="ts">

@@ -16,7 +16,7 @@
 					.small-title First release
 					.box
 						product-section-link(href="https://github.com/knt5/jpgis-convert/commit/830c1334d5f6cdb7aa999daac045b25d3443f8a4")
-							| 2016/06/18 830c133
+							| 2016.06.18 830c133
 </template>
 
 <script lang="ts">

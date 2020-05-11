@@ -13,7 +13,7 @@
 					.small-title First release
 					.box
 						product-section-link(href="https://github.com/knt5/fur-shader/commit/2d5440c9c0a23cb6854920524691e4dc091ee40b")
-							| 2016/07/17 2d5440c
+							| 2016.07.17 2d5440c
 </template>
 
 <script lang="ts">

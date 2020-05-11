@@ -14,7 +14,7 @@
 					.small-title First release
 					.box
 						product-section-link(href="https://github.com/knt5/console-artist/commit/811d2802aeaffbb4567b20651cbdb02268938634")
-							| 2016/05/09 811d280
+							| 2016.05.09 811d280
 </template>
 
 <script lang="ts">
