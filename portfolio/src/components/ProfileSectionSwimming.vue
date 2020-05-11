@@ -19,7 +19,7 @@ import SwimmingRepository from '@/repositories/api/portfolio/SwimmingRepository'
 import GetSwimmingApiResponse from '@/models/api/portfolio/swimming/GetSwimmingApiResponse';
 
 /** Max rows a column */
-const maxRow = 5;
+const maxRow = 4;
 
 /** Swimming */
 @Component({})
