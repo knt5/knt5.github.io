@@ -26,17 +26,20 @@
 						) {{ interest }}
 		profile-section-programming
 		profile-section-swimming
+		profile-section-recipe-bookmark
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import ProfileSectionProgramming from '@/components/ProfileSectionProgramming.vue';
+import ProfileSectionRecipeBookmark from '@/components/ProfileSectionRecipeBookmark.vue';
 import ProfileSectionSwimming from '@/components/ProfileSectionSwimming.vue';
 
 /** Profile section */
 @Component({
 	components: {
 		ProfileSectionProgramming,
+		ProfileSectionRecipeBookmark,
 		ProfileSectionSwimming,
 	},
 })
