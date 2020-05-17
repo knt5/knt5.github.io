@@ -28,6 +28,8 @@ export default class AppHeader extends Vue {
 		switch (this.$route.name) {
 			case RouteName.Home:
 				return `Portfolio`;
+			case RouteName.RecipeBookmark:
+				return `Recipe bookmarks`;
 			case RouteName.NotFound:
 				return ``;
 			default:
