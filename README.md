@@ -18,3 +18,19 @@ npm run build
 # Lints and fixes files
 npm run lint
 ```
+
+# vscode eslint settings.json
+
+```
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"html",
+		"vue"
+	]
+```
