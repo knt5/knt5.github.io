@@ -6,9 +6,11 @@ import store from '@/store';
 // Plugins
 import VueMeta from 'vue-meta';
 import BrowserPlugin from '@/plugins/BrowserPlugin';
+import RouteNamePlugin from '@/plugins/RouteNamePlugin';
 import UrlPlugin from '@/plugins/UrlPlugin';
 Vue.use(VueMeta, { keyName: `meta` });
 Vue.use(BrowserPlugin);
+Vue.use(RouteNamePlugin);
 Vue.use(UrlPlugin);
 
 // Filters

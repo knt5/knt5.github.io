@@ -1,5 +1,6 @@
 enum RouteName {
 	Home = `home`,
+	RecipeBookmark = `recipeBookmark`,
 	NotFound = `notFound`,
 }
 
