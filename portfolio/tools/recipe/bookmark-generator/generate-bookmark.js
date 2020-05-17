@@ -90,10 +90,10 @@ async function generate() {
 			createdBy,
 			updatedAt: today,
 			category: getCategory(comment),
-			title: openGraph.ogTitle,
+			title: openGraph.ogTitle ? openGraph.ogTitle : ``,
 			site: openGraph.ogSiteName ? openGraph.ogSiteName : ``,
 			url,
-			imageUrl: openGraph.ogImage.url,
+			imageUrl: openGraph.ogImage.url, // if no ogImage, throw Error
 		};
 
 		bookmarks.push(bookmark);
