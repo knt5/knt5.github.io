@@ -2,7 +2,7 @@
 	//- TODO: 3D pie chart
 	.programming
 		.sub-section-title Programming languages
-		.sub-section-content.clearfix
+		.sub-section-content
 			.card
 				.title 🎉 I like ✨
 				div JavaScript, C, TypeScript

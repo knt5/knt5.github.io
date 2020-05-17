@@ -64,7 +64,7 @@ export default class ProfileSectionSwimming extends Vue {
 
 .swimming {
 	@extend %content;
-	margin-top: 37px;
+	margin-top: 20px;
 }
 
 .record-column {
