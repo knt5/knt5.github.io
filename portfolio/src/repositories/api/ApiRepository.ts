@@ -59,6 +59,7 @@ namespace ApiRepository {
 	export enum Name {
 		// PortfolioApi
 		Swimming = `Swimming`,
+		RecipeBookmark = `RecipeBookmark`,
 	}
 }
 
