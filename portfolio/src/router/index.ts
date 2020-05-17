@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router';
 import ApiManager from '@/managers/ApiManager';
 import RouteName from '@/models/router/RouteName';
 import Home from '@/views/Home.vue';
+import RecipeBookmark from '@/views/RecipeBookmark.vue';
 import NotFound from '@/views/NotFound.vue';
 
 Vue.use(VueRouter);
@@ -12,6 +13,13 @@ const routes: Array<RouteConfig> = [
 		path: `/`,
 		name: RouteName.Home,
 		component: Home,
+		caseSensitive: true,
+		pathToRegexpOptions: { strict: true },
+	},
+	{
+		path: `/recipe/bookmark`,
+		name: RouteName.RecipeBookmark,
+		component: RecipeBookmark,
 		caseSensitive: true,
 		pathToRegexpOptions: { strict: true },
 	},
