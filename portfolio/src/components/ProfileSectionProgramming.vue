@@ -1,17 +1,17 @@
 <template lang="pug">
 	//- TODO: 3D pie chart
 	.programming
-		.sub-section-title Programming language
-		.sub-section-content
-			.box
+		.sub-section-title Programming languages
+		.sub-section-content.clearfix
+			.card
 				.title 🎉 I like ✨
-				div JavaScript, TypeScript, C
-			.box
+				div JavaScript, C, TypeScript
+			.card
 				.title ⚡️ Work experience
-				div TypeScript, JavaScript, C, C#, Python, SCSS, Pug, Swift, Java, CSS, HTML, Shell script, Perl
+				div TypeScript, JavaScript, Java, C, C#, Python, Swift, SCSS, CSS, Pug, HTML, Shell script, Perl
 					.weak , Objective-C, ActionScript(old!), PHP
 					span , etc
-			.box
+			.card
 				.title 🍀 Private
 				div Work experience + Go, GLSL
 					.weak , R, AppleScript, C++
@@ -35,16 +35,12 @@ export default class ProfileSectionProgramming extends Vue {}
 	@extend %content;
 }
 
-.sub-section-content {
-	padding: 0 $content-padding;
-}
-
-.box {
-	margin-top: 20px;
-
-	&:first-child {
-		margin-top: 0;
-	}
+.card {
+	display: inline-block;
+	width: 280px;
+	margin: 0 20px 20px 0;
+	padding: 15px 15px;
+	vertical-align: top;
 }
 
 .title {
