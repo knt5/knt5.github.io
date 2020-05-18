@@ -2,8 +2,9 @@
 	.app-header
 		.header
 			.content
-				h1.title Kenta Motomura
-					a.github(:href="$url.github" target="_blank")
+				router-link(:to="{ name: $routeName.home }")
+					h1.title Kenta Motomura
+				a.github(:href="$url.github" target="_blank")
 				.view-title {{ viewTitle }}
 		.medal-box
 			.medal
@@ -58,9 +59,14 @@ $github-icon-small-size: 32px;
 
 .title {
 	display: inline-block;
+	color: #fff;
 	font-weight: normal;
 	font-size: 60px;
 	line-height: 1.1;
+
+	&:hover {
+		opacity: 0.6;
+	}
 }
 
 .github {
