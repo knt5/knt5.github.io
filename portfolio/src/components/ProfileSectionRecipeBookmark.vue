@@ -91,15 +91,14 @@ $size: 80px;
 	display: inline-block;
 	width: $size;
 	height: $size;
+	margin: 0 1px 1px 0;
 	vertical-align: bottom;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	border: 1px solid #fff;
 
 	&:hover {
-		text-decoration: none;
-		border: 1px solid $link-text-hover-color;
+		opacity: 0.5;
 	}
 }
 
