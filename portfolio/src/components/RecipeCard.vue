@@ -42,11 +42,12 @@ export default class RecipeCard extends Vue {
 @import '~@/styles/section';
 @import '~@/styles/variables';
 
+$card-width: 430px;
+
 .recipe-card {
 	display: inline-block;
 	margin: 0 10px 10px 0;
 	vertical-align: top;
-	border: 1px solid #fff;
 
 	&:hover {
 		text-decoration: none;
@@ -57,7 +58,7 @@ export default class RecipeCard extends Vue {
 .image {
 	display: block;
 	width: 100%;
-	max-width: 430px;
+	max-width: $card-width;
 	height: 280px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -65,7 +66,7 @@ export default class RecipeCard extends Vue {
 }
 
 .details {
-	width: 430px;
+	width: $card-width;
 	margin: 15px 0;
 	text-align: left;
 }
@@ -92,6 +93,27 @@ export default class RecipeCard extends Vue {
 	font-size: 14px;
 	background: #ddf;
 	border-radius: 28px;
-	transition: border 0.1s ease-out;
+}
+
+@media (max-width: $content-width) {
+	.recipe-card {
+		margin: 0 0 20px 0;
+	}
+
+	.details {
+		padding: 0 10px;
+	}
+}
+
+@media (max-width: $card-width) {
+	.recipe-card {
+		display: block;
+		width: auto;
+		margin: 0 0 20px 0;
+	}
+
+	.details {
+		width: auto;
+	}
 }
 </style>

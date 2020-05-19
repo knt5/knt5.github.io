@@ -48,6 +48,7 @@ export default class RecipeBookmark extends Vue {
 <style lang="scss" scoped>
 @import '~@/styles/layout';
 @import '~@/styles/section';
+@import '~@/styles/variables';
 
 .recipe-bookmark {
 	margin-top: 60px;
@@ -57,5 +58,11 @@ export default class RecipeBookmark extends Vue {
 	@extend %content;
 	margin-top: 50px;
 	text-align: center;
+}
+
+@media (max-width: $content-width) {
+	.section-title {
+		font-size: 35px;
+	}
 }
 </style>
