@@ -8,7 +8,7 @@
 					.record-year {{ record.year }}
 					.record : {{ record.distance | digit }}m ({{ feet(record.distance) | digit }}ft)
 					.notice-mark(v-show="record.year === 2020") *
-		.notice * 2020: 🦠 closed all swimming pools
+		.notice * 2020: 🦠 COVID-19 closed many swimming pools
 </template>
 
 <script lang="ts">

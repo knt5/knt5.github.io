@@ -26,7 +26,11 @@
 		},
 		{
 			"year": 2020,
-			"distance": 8000
+			"distance": 17000
+		},
+		{
+			"year": 2021,
+			"distance": 1000
 		}
 	]
 }
