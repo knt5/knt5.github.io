@@ -82,7 +82,17 @@ async function generate() {
 		const createdAt = date ? dayjs(date).format(dateFormat) : today;
 		const createdBy = getUserId(comment);
 
-		const openGraph = (await getOpenGraph(url)).data;
+		let openGraph;
+		try {
+			openGraph = (await getOpenGraph(url)).data;	
+		} catch (error) {
+			console.error(`---------------------------------------`);
+			console.error(error);
+			console.error(`Failed to get open graph:`);
+			console.error(url);
+			console.error(`---------------------------------------`);
+			continue;
+		}
 		console.log(openGraph);
 
 		const bookmark = {
