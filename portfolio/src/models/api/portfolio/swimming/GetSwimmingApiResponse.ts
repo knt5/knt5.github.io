@@ -14,6 +14,9 @@ namespace GetSwimmingApiResponse {
 
 		/** Swim distance */
 		distance: number;
+
+		/** Comment */
+		comment?: string;
 	}
 }
 

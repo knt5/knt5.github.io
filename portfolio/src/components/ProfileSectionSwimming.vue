@@ -7,8 +7,12 @@
 				.record-row(v-for="record in columnRecords" :key="record.year")
 					.record-year {{ record.year }}
 					.record : {{ record.distance | digit }}m ({{ feet(record.distance) | digit }}ft)
-					.notice-mark(v-show="record.year === 2020") *
-		.notice * 2020: 🦠 COVID-19 closed many swimming pools
+					.notice-mark(v-show="record.comment") {{record.commentMark}}
+		.notice
+			//- TODO: refactor
+			div(v-for="(columnRecords, index) in records" :key="index")
+				div(v-for="record in columnRecords" :key="record.year")
+					div(v-show="record.comment")  {{record.commentMark}} {{record.comment}}
 </template>
 
 <script lang="ts">
@@ -30,17 +34,27 @@ export default class ProfileSectionSwimming extends Vue {
 
 	private response: GetSwimmingApiResponse | null = null;
 
-	private get records(): GetSwimmingApiResponse.Record[][] {
-		const records: GetSwimmingApiResponse.Record[][] = [];
+	private get records(): (GetSwimmingApiResponse.Record & {
+		commentMark?: string;
+	})[][] {
+		const records: (GetSwimmingApiResponse.Record & {
+			commentMark?: string;
+		})[][] = [];
 
 		if (this.response) {
+			let commentIndex = 0;
 			let columnIndex = -1;
 			this.response.records.forEach((record, index) => {
 				if (index % maxRow === 0) {
 					columnIndex++;
 					records[columnIndex] = [];
 				}
-				records[columnIndex].push(record);
+				records[columnIndex].push({
+					...record,
+					commentMark: record.comment
+						? ``.padStart(++commentIndex, `*`)
+						: undefined,
+				});
 			});
 		}
 
