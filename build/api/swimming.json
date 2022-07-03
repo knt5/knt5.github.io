@@ -26,11 +26,17 @@
 		},
 		{
 			"year": 2020,
-			"distance": 17000
+			"distance": 17000,
+			"comment": "COVID-19 closed all swimming pools"
 		},
 		{
 			"year": 2021,
-			"distance": 17100
+			"distance": 36100
+		},
+		{
+			"year": 2022,
+			"distance": 23000,
+			"comment": "July 3rd, 2022"
 		}
 	]
 }
