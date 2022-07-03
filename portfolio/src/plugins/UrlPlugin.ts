@@ -18,7 +18,7 @@ export default class UrlPlugin {
 		hakoniwa: `${this.githubPages}/demo/hakoniwa/`,
 		cityGenerator: `${this.githubPages}/demo/city-generator/`,
 		fur: `${this.githubPages}/demo/fur/`,
-		cubox: `http://knt5lab.appspot.com/cubox/`,
+		cubox: `${this.githubPages}/demo/cubox/`,
 		consoleArtist: `${this.githubPages}/demo/console-artist/`,
 		portfolio: {
 			v1: `${this.githubPages}/demo/portfolio/v1/`,
