@@ -35,8 +35,12 @@
 		},
 		{
 			"year": 2022,
-			"distance": 23000,
-			"comment": "July 3rd, 2022"
+			"distance": 43100
+		},
+		{
+			"year": 2023,
+			"distance": 19375,
+			"comment": "June 17th, 2023"
 		}
 	]
 }
