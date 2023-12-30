@@ -5,7 +5,7 @@
 		.sub-section-content
 			.card
 				.title 🎉 I like ✨
-				div JavaScript, C, TypeScript
+				div TypeScript, C, JavaScript
 			.card
 				.title ⚡️ Work experience
 				div TypeScript, JavaScript, Java, C, C#, Python, Swift, SCSS, CSS, Pug, HTML, Shell script, Perl
