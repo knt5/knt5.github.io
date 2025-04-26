@@ -35,9 +35,9 @@ export default class ProductSectionJpgisConvert extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/product';
-@import '~@/styles/section';
-@import '~@/styles/title';
+@use '~@/styles/product';
+@use '~@/styles/section';
+@use '~@/styles/title';
 
 .small-title {
 	@extend %small-title;

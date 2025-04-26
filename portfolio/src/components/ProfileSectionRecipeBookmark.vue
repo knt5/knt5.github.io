@@ -69,9 +69,9 @@ export default class ProfileSectionRecipeBookmark extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/layout';
-@import '~@/styles/section';
-@import '~@/styles/variables';
+@use '~@/styles/layout';
+@use '~@/styles/section';
+@use '~@/styles/variables';
 
 $size: 80px;
 

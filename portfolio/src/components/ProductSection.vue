@@ -64,7 +64,7 @@ export default class ProductSection extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/section';
+@use '~@/styles/section';
 
 .first-box {
 	margin-top: 40px;

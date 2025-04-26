@@ -41,7 +41,8 @@ export default class AppHeader extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/layout';
+@use '~@/styles/layout';
+@use '~@/styles/variables';
 
 $github-icon-size: 50px;
 $github-icon-small-size: 32px;
@@ -104,7 +105,7 @@ $github-icon-small-size: 32px;
 	text-align: center;
 }
 
-@media (max-width: $content-width) {
+@media (max-width: variables.$content-width) {
 	.content {
 		padding: 40px 0;
 		text-align: center;

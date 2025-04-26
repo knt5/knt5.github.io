@@ -44,12 +44,12 @@ export default class ProductSectionHakoniwa extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/section';
-@import '~@/styles/title';
-@import '~@/styles/variables';
+@use '~@/styles/section';
+@use '~@/styles/title';
+@use '~@/styles/variables';
 
 // import after title.scss
-@import '~@/styles/product';
+@use '~@/styles/product';
 
 .title {
 	@extend %dark-title;
@@ -67,7 +67,7 @@ export default class ProductSectionHakoniwa extends Vue {}
 
 .image {
 	width: 100%;
-	max-width: $content-width;
+	max-width: variables.$content-width;
 	margin-top: 10px;
 }
 

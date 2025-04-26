@@ -1,10 +1,10 @@
-@import '~@/styles/layout';
-@import '~@/styles/variables';
+@use '~@/styles/layout';
+@use '~@/styles/variables';
 
 .content {
 	@extend %content;
 	margin-top: 10px;
-	padding: 0 $content-padding;
+	padding: 0 variables.$content-padding;
 	text-align: center;
 }
 

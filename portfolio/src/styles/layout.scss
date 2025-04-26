@@ -1,11 +1,11 @@
-@import '~@/styles/variables';
+@use "~@/styles/variables";
 
 %content {
-	width: $content-width;
+	width: variables.$content-width;
 	margin: 0 auto;
 }
 
-@media (max-width: $content-width) {
+@media (max-width: variables.$content-width) {
 	%content {
 		width: auto;
 	}

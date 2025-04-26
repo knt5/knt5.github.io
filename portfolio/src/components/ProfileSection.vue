@@ -85,9 +85,10 @@ export default class ProfileSection extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/layout';
-@import '~@/styles/section';
-@import '~@/styles/title';
+@use '~@/styles/layout';
+@use '~@/styles/section';
+@use '~@/styles/title';
+@use '~@/styles/variables';
 
 .profile-section {
 	@extend %content;
@@ -130,7 +131,7 @@ export default class ProfileSection extends Vue {
 
 	&:hover {
 		text-decoration: none;
-		border: 1px solid $link-text-hover-color;
+		border: 1px solid variables.$link-text-hover-color;
 		box-shadow: 0 1px 2px 0px #ccc;
 	}
 }
@@ -139,7 +140,7 @@ export default class ProfileSection extends Vue {
 	@extend %small-title;
 }
 
-@media (max-width: $content-width) {
+@media (max-width: variables.$content-width) {
 	.card {
 		margin: 0;
 		padding: 10px 14px;

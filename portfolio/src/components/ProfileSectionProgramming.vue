@@ -27,9 +27,9 @@ export default class ProfileSectionProgramming extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/layout';
-@import '~@/styles/section';
-@import '~@/styles/title';
+@use '~@/styles/layout';
+@use '~@/styles/section';
+@use '~@/styles/title';
 
 .programming {
 	@extend %content;

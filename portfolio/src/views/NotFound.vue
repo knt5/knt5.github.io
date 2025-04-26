@@ -15,7 +15,7 @@ export default class NotFound extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/layout';
+@use '~@/styles/layout';
 
 .not-found {
 	padding: 120px 0 60px;

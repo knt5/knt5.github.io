@@ -12,7 +12,7 @@ export default class ProductSectionSeparator extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/layout';
+@use '~@/styles/layout';
 
 .product-section-separator {
 	@extend %content;

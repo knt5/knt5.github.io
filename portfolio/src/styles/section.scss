@@ -1,13 +1,13 @@
-@import '~@/styles/variables';
+@use '~@/styles/variables';
 
 .section-title {
-	color: $strong-text-color;
+	color: variables.$strong-text-color;
 	font-size: 55px;
 	text-align: center;
 }
 
 .sub-section-title {
-	color: $strong-text-color;
+	color: variables.$strong-text-color;
 	font-size: 30px;
 	text-align: center;
 }

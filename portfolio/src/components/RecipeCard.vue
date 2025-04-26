@@ -39,8 +39,8 @@ export default class RecipeCard extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/section';
-@import '~@/styles/variables';
+@use '~@/styles/section';
+@use '~@/styles/variables';
 
 $card-width: 430px;
 
@@ -72,7 +72,7 @@ $card-width: 430px;
 }
 
 .title {
-	color: $strong-text-color;
+	color: variables.$strong-text-color;
 	font-weight: bold;
 }
 
@@ -89,13 +89,13 @@ $card-width: 430px;
 	float: right;
 	margin: -2px 0 0 10px;
 	padding: 2px 12px;
-	color: $text-color;
+	color: variables.$text-color;
 	font-size: 14px;
 	background: #ddf;
 	border-radius: 28px;
 }
 
-@media (max-width: $content-width) {
+@media (max-width: variables.$content-width) {
 	.recipe-card {
 		margin: 0 0 20px 0;
 	}

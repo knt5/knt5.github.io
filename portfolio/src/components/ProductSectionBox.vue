@@ -29,7 +29,7 @@ export default ProductSectionBox;
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/layout';
+@use '~@/styles/layout';
 
 .product-section-box {
 	padding-top: 60px;

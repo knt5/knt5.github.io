@@ -1,4 +1,4 @@
-@import '~@/styles/variables';
+@use '~@/styles/variables';
 
 //=============================================================================
 // reset
@@ -55,12 +55,14 @@ td {
 //=============================================================================
 // base
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 
 body {
-	color: $text-color;
+	color: variables.$text-color;
 	font-size: 18px;
 	line-height: 1.5;
 	background: #fff;
@@ -74,16 +76,17 @@ textarea,
 button,
 th,
 td {
-	font-family: "Myriad Pro", "Lucida Grande", "GillSans", "Hiragino Kaku Gothic Pro", "Meiryo", "sans-serif";
+	font-family: "Myriad Pro", "Lucida Grande", "GillSans",
+		"Hiragino Kaku Gothic Pro", "Meiryo", "sans-serif";
 }
 
 a {
-	color: $link-text-color;
+	color: variables.$link-text-color;
 	text-decoration: none;
 }
 
 a:hover {
-	color: $link-text-hover-color;
+	color: variables.$link-text-hover-color;
 	text-decoration: underline;
 }
 
@@ -107,5 +110,5 @@ button {
 .clearfix::after {
 	display: block;
 	clear: both;
-	content: '';
+	content: "";
 }

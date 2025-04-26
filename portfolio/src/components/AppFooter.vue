@@ -17,7 +17,7 @@ export default class AppFooter extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/layout';
+@use '~@/styles/layout';
 
 @mixin icon($name) {
 	background: url(~@/assets/img/icons/#{$name}.png) no-repeat left 2px;

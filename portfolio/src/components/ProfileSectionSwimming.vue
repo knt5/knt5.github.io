@@ -72,9 +72,10 @@ export default class ProfileSectionSwimming extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/layout';
-@import '~@/styles/section';
-@import '~@/styles/notice';
+@use '~@/styles/layout';
+@use '~@/styles/section';
+@use '~@/styles/notice';
+@use '~@/styles/variables';
 
 .swimming {
 	@extend %content;
@@ -83,7 +84,7 @@ export default class ProfileSectionSwimming extends Vue {
 
 .record-column {
 	display: inline-block;
-	padding: 0 $content-padding;
+	padding: 0 variables.$content-padding;
 	vertical-align: top;
 }
 

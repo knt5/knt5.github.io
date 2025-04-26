@@ -15,7 +15,8 @@ export default class ProfileMedal extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/layout';
+@use '~@/styles/layout';
+@use '~@/styles/variables';
 
 // medal size
 $size: 180px;
@@ -32,7 +33,7 @@ $small-size: 140px;
 	box-shadow: 0 2px 6px 1px #999;
 }
 
-@media (max-width: $content-width) {
+@media (max-width: variables.$content-width) {
 	.profile-medal {
 		width: $small-size;
 		height: $small-size;

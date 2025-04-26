@@ -1,7 +1,7 @@
-@import '~@/styles/variables';
+@use '~@/styles/variables';
 
 %small-title {
-	color: $strong-text-color;
+	color: variables.$strong-text-color;
 	font-weight: bold;
 	font-size: 14px;
 	letter-spacing: 0.1em;

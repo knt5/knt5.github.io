@@ -47,10 +47,10 @@ export default class ProductSectionCubox extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/notice';
-@import '~@/styles/product';
-@import '~@/styles/section';
-@import '~@/styles/title';
+@use '~@/styles/notice';
+@use '~@/styles/product';
+@use '~@/styles/section';
+@use '~@/styles/title';
 
 .small-title {
 	@extend %small-title;
